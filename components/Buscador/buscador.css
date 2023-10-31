@@ -1,0 +1,29 @@
+.buscador {
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    
+  }
+  
+  .buscador__input {
+    width: 100%;
+    border: none;
+    border-bottom: 5px solid white;
+    background-color: transparent; /* Hace el fondo transparente */
+    padding: 20px;
+    outline: none;
+    color: white;
+    font-size: 40px;
+  }
+  
+  .buscador__input::placeholder {
+    color: rgb(128, 121, 121); /* Establece el color del texto del placeholder en blanco */
+    background-color: transparent; /* Hace el fondo del placeholder transparente */
+    font-size: 40px;
+    transition: all .3s;
+  }
+
+  .buscador__input:focus::placeholder {
+    color: white; /* Cambia el color del placeholder a azul cuando se hace focus en el input */
+  }
+  

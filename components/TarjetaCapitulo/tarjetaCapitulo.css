@@ -1,0 +1,20 @@
+.tarjetaCapitulo{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+}
+.tarjetaCapitulo__info {
+    padding: 10px;
+   }
+.tarjetaCapitulo__info h1{
+ color: white;
+ font-size: 15px;
+ 
+}
+.tarjetaCapitulo__info span{
+    color: white;
+    font-size: 12px;
+   }

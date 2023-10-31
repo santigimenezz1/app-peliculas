@@ -1,0 +1,22 @@
+.tarjetaPelicula{
+    width: 310px;
+    height: 180px;
+    border: none;
+    border-radius: 12px;
+    position: relative;
+    border: 3px solid black;
+    transition: all .4s;
+    cursor: pointer;
+    margin: 10px;
+}
+.tarjetaPelicula:hover{
+    border: 3px solid white;
+    transform: scale(1.05);
+}
+.tarjetaPelicula__img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    padding: 2px;
+}

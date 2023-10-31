@@ -1,0 +1,9 @@
+.reproductorVideo img{
+    width: 150px;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.reproductorVideo img:hover{
+   transform: scale(1.05);
+}
