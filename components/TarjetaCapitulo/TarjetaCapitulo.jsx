@@ -7,7 +7,7 @@ const TarjetaCapitulo = () => {
     <div className='tarjetaCapitulo'>
     <TarjetaPelicula />
     <div className='tarjetaCapitulo__info'>
-     <h1>1.Nombre del capitulo</h1>
+     <h1>1.Nombre del capitulo (45 min)</h1>
      <span>Breve descripcion de lo que trada el capitulo Breve descripcion de lo que trada el capitulo</span>
     </div>
       

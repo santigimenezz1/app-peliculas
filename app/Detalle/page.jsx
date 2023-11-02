@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Detalle/detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
+import BotonVer from '@/components/BotonVer/BotonVer'
 
 const Detalle = () => {
   return (
@@ -22,7 +23,9 @@ const Detalle = () => {
             <h1>Vince Gilligan</h1>
             <h2>Creador</h2>
          </div>
-
+         <div>
+         <BotonVer />
+         </div>
       </div>
     </div>
   )

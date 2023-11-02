@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TarjetaSerie from "../TarjetaSerie/TarjetaSerie";
 
-export default function CarouselTarjetasSerie() {
+export default function CarouselTarjetasSerie( {text} ) {
     const CustomPrevArrow = (props) => (
         <button className="slick-arrow slick-prev" onClick={props.onClick}>
           Anterior
@@ -59,6 +59,7 @@ export default function CarouselTarjetasSerie() {
 
   return (
     <div style={{padding:"30px"}}>
+      <h1 style={{color:"white", letterSpacing:"2px", fontSize:"30px"}}>{text}</h1>
       <Slider {...settings}>
         <div>
           <TarjetaSerie />

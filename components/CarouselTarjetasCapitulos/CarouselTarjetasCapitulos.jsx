@@ -2,10 +2,9 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import TarjetaPelicula from "../TarjetaPelicula/TarjetaPelicula";
-import '../CarouselTarjetasPelicula/carouselTarjetaPelicula.css';
+import TarjetaCapitulo from "../TarjetaCapitulo/TarjetaCapitulo";
 
-export default function CarouselTarjetasPelicula( {text} ) {
+export default function CarouselTarjetasCapitulos() {
     const CustomPrevArrow = (props) => (
         <button className="slick-arrow slick-prev" onClick={props.onClick}>
           Anterior
@@ -59,56 +58,55 @@ export default function CarouselTarjetasPelicula( {text} ) {
  
 
   return (
-    <div style={{paddingLeft:"35px", paddingRight:"35px"}}>
-      <h1 style={{color:"white", fontSize:"30px", letterSpacing:"2px"}}>{text}</h1>
+    <div style={{padding:"0px"}}>
       <Slider {...settings}>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
         <div>
-          <TarjetaPelicula />
+          <TarjetaCapitulo />
         </div>
       </Slider>
     </div>

@@ -13,13 +13,28 @@ import CarouselTarjetasSerie from '@/components/CarouselTarjetasSerie/CarouselTa
 import Posts from './posts/page'
 import TarjetaActor from '@/components/TarjetaActor/TarjetaActor'
 import Detalle from './Detalle/page'
+import RepartoActores from '@/components/RepartoActores/RepartoActores'
+import Temporadas from '@/components/Temporadas/Temporadas'
+import FondoInteractivo from '@/components/FondoInteractivo/FondoInteractivo'
 
 
 export default function Home() {
   return (
    <>
-   
-   <Detalle />
+   <FondoDinamico />
+   <CarouselTarjetasPelicula text={"Tendencia"} />
+   <CarouselTarjetasSerie text={"Lo mas popular"}  />
+   <CarouselTarjetasSerie text={"Mejor valorado"} />
+   <CarouselTarjetasPelicula text={"Lo que se viene"} />
+   <CarouselTarjetasPelicula  />
+   <CarouselTarjetasPelicula  />
+   <FondoInteractivo />
+
+  
+
+
+
+
    </>
     
   )

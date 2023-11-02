@@ -1,13 +1,15 @@
 .tarjetaCapitulo{
-    width: 320px;
+    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 20px;
 }
 .tarjetaCapitulo__info {
-    padding: 10px;
+   display: flex;
+   flex-direction: column;
+   padding-left: 10px;
    }
 .tarjetaCapitulo__info h1{
  color: white;
