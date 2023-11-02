@@ -1,13 +1,15 @@
 import React from 'react'
 import '../TarjetaActor/tarjetaActor.css'
 
-const TarjetaActor = () => {
+const TarjetaActor = ( {actor} ) => {
+  const urlImagen = `https://image.tmdb.org/t/p/original/${actor.profile_path}`
+
   return (
     <div className='tarjetaActor'>
-        <img src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698707166/App%20peliculas/aGSvZg7uITJveQtGHDcPNI6map1_hqw6va.jpg'></img>
+        <img src={urlImagen}></img>
         <div className='tarjetaActor__info'>
-        <h2>Walter white</h2>
-        <h3>66 episodios</h3>
+        <h2>{actor.name}</h2>
+        <h3>{actor.cast_id} episodios</h3>
         </div>
     </div>
   )

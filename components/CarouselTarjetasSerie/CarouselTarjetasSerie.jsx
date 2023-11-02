@@ -3,8 +3,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TarjetaSerie from "../TarjetaSerie/TarjetaSerie";
+import Link from "next/link";
 
-export default function CarouselTarjetasSerie( {text} ) {
+export default function CarouselTarjetasSerie( {data ,text} ) {
+  if (!data) {
+    // Verifica si los datos aún no se han cargado
+    return null;
+  }
+
     const CustomPrevArrow = (props) => (
         <button className="slick-arrow slick-prev" onClick={props.onClick}>
           Anterior
@@ -61,30 +67,13 @@ export default function CarouselTarjetasSerie( {text} ) {
     <div style={{padding:"30px"}}>
       <h1 style={{color:"white", letterSpacing:"2px", fontSize:"30px"}}>{text}</h1>
       <Slider {...settings}>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
-        <div>
-          <TarjetaSerie />
-        </div>
+      {data.results.map((movie) => (
+          <div key={movie.id}>
+            <Link href={`/detalle/${movie.id}`}>
+            <TarjetaSerie movie={movie} />
+            </Link>
+          </div>
+        ))}
       </Slider>
     </div>
   );

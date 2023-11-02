@@ -1,10 +1,10 @@
 import React from 'react'
 import '../TarjetaImagenDetalle/tarjetaImagenDetalle.css'
 
-const TarjetaImagenDetalle = () => {
+const TarjetaImagenDetalle = ( {urlImagen} ) => {
   return (
     <div className='tarjetaImagenDetalle'>
-      <img src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698713821/App%20peliculas/fC2HDm5t0kHl7mTm7jxMR31b7by_lzpiao.jpg'></img>
+      <img src={urlImagen}></img>
     </div>
   )
 }

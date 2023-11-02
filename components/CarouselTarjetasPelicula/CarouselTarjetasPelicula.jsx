@@ -1,22 +1,30 @@
-'use client'
+"use client"
+import React from 'react';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TarjetaPelicula from "../TarjetaPelicula/TarjetaPelicula";
-import '../CarouselTarjetasPelicula/carouselTarjetaPelicula.css';
+import './carouselTarjetaPelicula.css';
+import Link from 'next/link';
 
-export default function CarouselTarjetasPelicula( {text} ) {
-    const CustomPrevArrow = (props) => (
-        <button className="slick-arrow slick-prev" onClick={props.onClick}>
-          Anterior
-        </button>
-      );
-    
-      const CustomNextArrow = (props) => (
-        <button className="slick-arrow slick-next" onClick={props.onClick}>
-          Siguiente
-        </button>
-      );
+export default function CarouselTarjetasPelicula({ data, text }) {
+  if (!data) {
+    // Verifica si los datos aún no se han cargado
+    return null;
+  }
+
+  const CustomPrevArrow = (props) => (
+    <button className="slick-arrow slick-prev" onClick={props.onClick}>
+      Anterior
+    </button>
+  );
+
+  const CustomNextArrow = (props) => (
+    <button className="slick-arrow slick-next" onClick={props.onClick}>
+      Siguiente
+    </button>
+  );
+
   const settings = {
     dots: false,
     infinite: false,
@@ -56,60 +64,15 @@ export default function CarouselTarjetasPelicula( {text} ) {
     ],
   };
 
- 
-
   return (
-    <div style={{paddingLeft:"35px", paddingRight:"35px"}}>
-      <h1 style={{color:"white", fontSize:"30px", letterSpacing:"2px"}}>{text}</h1>
+    <div style={{ paddingLeft: "35px", paddingRight: "35px" }}>
+      <h1 style={{ color: "white", fontSize: "30px", letterSpacing: "2px" }}>{text}</h1>
       <Slider {...settings}>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
-        <div>
-          <TarjetaPelicula />
-        </div>
+        {data.results.map((movie) => (
+         <Link href={`/detalle/${movie.id}`}>
+         <TarjetaPelicula movie={movie} />
+         </Link>
+        ))}
       </Slider>
     </div>
   );

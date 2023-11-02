@@ -1,11 +1,14 @@
 import React from 'react'
 import './tarjetaPelicula.css'
 
-const TarjetaPelicula = () => {
+const TarjetaPelicula = ( {movie} ) => {
+  const urlImagen = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
+
+  console.log({movie})
   return (
-    
     <div className='tarjetaPelicula'>
-    <img className='tarjetaPelicula__img' src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698621627/App%20peliculas/imagen_prueba_tarjeta_zms2c3.jpg'></img>
+      <h1 className='tarjetaPelicula__titulo'>{movie.title}</h1>
+    <img className='tarjetaPelicula__img' src={urlImagen}></img>
     </div>
   )
 }

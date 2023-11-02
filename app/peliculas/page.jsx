@@ -6,7 +6,6 @@ import Link from 'next/link'
 function Peliculas() {
   return (
     <div>
-      <TarjetaPelicula />
       <Link href={'/peliculas/drama'}>
       <TarjetaFiltrado text={"Drama"} />
       </Link>

@@ -4,7 +4,7 @@ import TarjetaSerie from '../../components/TarjetaSerie/TarjetaSerie'
 const Series = () => {
   return (
     <div>
-      <TarjetaSerie />
+      <h1 style={{color:"white"}}>seccion series</h1>
     </div>
   )
 }

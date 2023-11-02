@@ -1,11 +1,13 @@
 import React from 'react'
 import './tarjetaSerie.css'
+import Link from 'next/link'
 
-const TarjetaSerie = () => {
+const TarjetaSerie = ( {movie} ) => {
+  const urlImagen = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
   return (
-    <h1 className='tarjetaSerie'>
-    <img className='tarjetaSerie__img' src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698623623/App%20peliculas/scale_ytxylo.jpg'></img>
-    </h1>
+    <div className='tarjetaSerie'>
+    <img className='tarjetaSerie__img' src={urlImagen}></img>
+    </div>
   )
 }
 
