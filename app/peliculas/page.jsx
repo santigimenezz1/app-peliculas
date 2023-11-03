@@ -1,14 +1,57 @@
 import React from 'react'
-import TarjetaPelicula from '../../components/TarjetaPelicula/TarjetaPelicula'
-import TarjetaFiltrado from '@/components/TarjetaFiltrado/TarjetaFiltrado'
+import TarjetaSerie from '../../components/TarjetaSerie/TarjetaSerie'
+import '../series/series.css'
+import FondoDinamico from '@/components/FondoDinamico/FondoDinamico'
+import {peticionPeliculasSeViene, peticionPeliculasTendencia, peticionPeliculaspPopulares, } from '../peticionesFetch/page'
 import Link from 'next/link'
 
-function Peliculas() {
+async function Peliculas () {
+  const peliculasPopulares = await peticionPeliculaspPopulares ()
+  const peliculasTendencia = await peticionPeliculasTendencia ()
+  const peliculasSeViene = await peticionPeliculasSeViene ()
+
+
+
+  
   return (
-    <div>
-      <Link href={'/peliculas/drama'}>
-      <TarjetaFiltrado text={"Drama"} />
-      </Link>
+    <div className='series'>
+      <h1>Pelciulas</h1>
+      <h2 className='series__titulo__categoria'>Populares</h2 >
+      <div className='series__tarjetas'>
+         {
+          peliculasPopulares.results.slice(0,12).map((serie)=>(
+            <Link href={`/detalle/${serie.id}`}>
+            <TarjetaSerie movie={serie} />
+            </Link>          
+            ))
+         }
+         <div className='series__container'>
+         <h2 className='series__titulo__categoria'>Tendencia</h2>
+         <div className='container__tarjetas__flex'>
+        {
+          peliculasTendencia.results.map((serie)=>(
+            <Link href={`/detalle/${serie.id}`}>
+            <TarjetaSerie movie={serie} />
+            </Link>           ))
+         }
+         </div>
+         </div>
+         <div className='series__container'>
+          <h2 className='series__titulo__categoria'>Lo que se viene</h2>
+          <div className='container__tarjetas__flex'>
+          {
+
+      peliculasSeViene.results.map((serie)=>(
+        <Link href={`/detalle/${serie.id}`}>
+        <TarjetaSerie movie={serie} />
+        </Link>           ))
+         }
+          </div>
+         </div>
+
+         
+
+      </div>
     </div>
   )
 }

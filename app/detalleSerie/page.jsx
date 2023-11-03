@@ -1,9 +1,9 @@
 import React from 'react'
-import './detalle.css'
+import '../detalle/detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
 import BotonVer from '@/components/BotonVer/BotonVer'
 
-const Detalle = ( {data} ) => {
+const DetalleSerie = ( {data} ) => {
   if (!data) {
     // Verifica si los datos aún no se han cargado
     return null;
@@ -18,7 +18,8 @@ const Detalle = ( {data} ) => {
       <img className='detalle__imgFondo' src={urlImagen}></img>
       <div className='detalle__info'>
          <div className='detalle__info__titulo'>
-            <h1>{data.title} ({(data.release_date).slice(0,4)})</h1>
+         <h1>{data.name} ({(data.first_air_date).slice(0,4)})</h1>
+         <h3>{data.genres[0].name}</h3>
             {
               data.genres.name &&
             <h3>{data.genres[0].name}</h3>
@@ -41,6 +42,6 @@ const Detalle = ( {data} ) => {
   )
 }
 
-export default Detalle
+export default DetalleSerie
 
 

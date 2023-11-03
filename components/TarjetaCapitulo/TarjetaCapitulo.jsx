@@ -2,13 +2,17 @@ import React from 'react'
 import './tarjetaCapitulo.css'
 import TarjetaPelicula from '../TarjetaPelicula/TarjetaPelicula'
 
-const TarjetaCapitulo = () => {
+const TarjetaCapitulo = ({capitulo, index}) => {
+  let indexId = index + 1
+  const urlImagen = `https://image.tmdb.org/t/p/original/${capitulo.still_path}`
   return (
     <div className='tarjetaCapitulo'>
-    <TarjetaPelicula />
+      <div className='tarjetaPelicula'>
+     <img className='tarjetaPelicula__img' src={urlImagen}></img>
+    </div>
     <div className='tarjetaCapitulo__info'>
-     <h1>1.Nombre del capitulo (45 min)</h1>
-     <span>Breve descripcion de lo que trada el capitulo Breve descripcion de lo que trada el capitulo</span>
+     <h1>{indexId}.{capitulo.name} ({capitulo.runtime}m)</h1>
+     <span>{capitulo.overview}</span>
     </div>
       
     </div>

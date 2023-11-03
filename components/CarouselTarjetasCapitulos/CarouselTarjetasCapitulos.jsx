@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TarjetaCapitulo from "../TarjetaCapitulo/TarjetaCapitulo";
 
-export default function CarouselTarjetasCapitulos() {
+export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
     const CustomPrevArrow = (props) => (
         <button className="slick-arrow slick-prev" onClick={props.onClick}>
           Anterior
@@ -55,59 +55,19 @@ export default function CarouselTarjetasCapitulos() {
     ],
   };
 
- 
-
   return (
     <div style={{padding:"0px"}}>
       <Slider {...settings}>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
-        <div>
-          <TarjetaCapitulo />
-        </div>
+        
+          {
+            capitulosTemporada.map((capitulo, index)=>(
+              <div>
+              <TarjetaCapitulo capitulo={capitulo} index={index} />
+              </div> 
+            ))
+          }
+       
+     
       </Slider>
     </div>
   );

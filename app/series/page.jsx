@@ -1,12 +1,10 @@
 import React from 'react'
-import TarjetaSerie from '../../components/TarjetaSerie/TarjetaSerie'
+import MapeoSectionSeries from '@/components/MapeoSectionSeries/MapeoSectionSeries'
 
-const Series = () => {
-  return (
-    <div>
-      <h1 style={{color:"white"}}>seccion series</h1>
-    </div>
-  )
+async function Series() {
+ return (
+  <MapeoSectionSeries />
+ )
 }
 
 export default Series

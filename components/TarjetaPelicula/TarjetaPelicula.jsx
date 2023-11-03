@@ -4,7 +4,6 @@ import './tarjetaPelicula.css'
 const TarjetaPelicula = ( {movie} ) => {
   const urlImagen = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
 
-  console.log({movie})
   return (
     <div className='tarjetaPelicula'>
       <h1 className='tarjetaPelicula__titulo'>{movie.title}</h1>

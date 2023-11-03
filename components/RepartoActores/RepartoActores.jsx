@@ -4,9 +4,7 @@ import TarjetaActor from "../TarjetaActor/TarjetaActor"
 import Link from "next/link"
 
 const RepartoActores = ( {reparto, id} )=>{
-
-    const cast = reparto.cast[1]
-
+    
     return (
         <div>
             <h1 className="titulo__repartoActores">Reparto</h1>
