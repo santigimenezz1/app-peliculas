@@ -5,7 +5,6 @@ import { RepartoPelicula, buscarPelicula } from "@/app/peticionesFetch/page"
 
 
 async function Prueba({ params }) {
-  // Accede al valor de params.id en lugar de id
   let data = await buscarPelicula("movie" ,params.id);
   let reparto = await RepartoPelicula(params.id)
   let id = params.id
