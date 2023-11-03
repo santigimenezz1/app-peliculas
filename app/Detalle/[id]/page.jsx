@@ -8,6 +8,8 @@ async function Prueba({ params }) {
   let data = await buscarPelicula("movie" ,params.id);
   let reparto = await RepartoPelicula(params.id)
   let id = params.id
+
+  let test= reparto.cast
   
   return (
     <>

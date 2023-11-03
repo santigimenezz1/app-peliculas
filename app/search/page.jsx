@@ -1,10 +1,12 @@
 import React from 'react'
 import Buscador from '../../components/Buscador/Buscador'
+import MapeoSectionSeries from '@/components/MapeoSectionSeries/MapeoSectionSeries'
 
-const Series = () => {
+function Series () {
   return (
     <div>
       <Buscador />
+      <MapeoSectionSeries />
     </div>
   )
 }
