@@ -5,7 +5,7 @@ const Biografia = ()=>{
         <div className="biografia">
                 <img src="https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698979355/App%20peliculas/8Ac9uuoYwZoYVAIJfRLzzLsGGJn_kwkv81.jpg"></img>
                 <div className="boigrafia__info">
-                    <h1>Nombre del actor</h1>
+                    <h1>Aaron Paul</h1>
                     <div className='biografia__info__biografia'>
                         <h2>Biografia</h2>
                         <span>Aaron Paul es un actor y productor estadounidense. Nació el 27 de agosto de 1979 en Emmett, Idaho. Cuenta con una carrera de más de 20 años entre cine y televisión. Su papel más conocido es el de Jesse Pinkman en la exitosa serie 'Breaking Bad', con la que consiguió grandes hitos como el premio a mejor actor de reparto en los Emmys.
