@@ -1,23 +1,40 @@
 'use client'
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import '../Temporadas/temporadas.css'
 import NumeroTemporada from "./NumeroTemporada/NumeroTemporada"
 import TarjetaCapitulo from "../TarjetaCapitulo/TarjetaCapitulo"
 import CarouselTarjetasCapitulos from "../CarouselTarjetasCapitulos/CarouselTarjetasCapitulos"
+import { peticionCapituloTemporada } from "@/app/peticionesFetch/page"
 const Temporadas = ({ data }) => {
     let seasons = data.seasons
     let id = data.id
+    let seasonsFiltrado = seasons.filter((season) => (season.name !== "Especiales"))
+    let idTemporada1 = seasonsFiltrado[0].id
     const [capitulosTemporada, setCapitulosTemporada] = useState([])
+    const [temporadaSelect, setTemporadaSelect] = useState(1)
 
+    console.log({idTemporada1})
+    console.log({capitulosTemporada})
+    console.log({seasonsFiltrado})
+
+    async function cambiarCapitulos (numeroTemporada, id ){
+        let peticion = await peticionCapituloTemporada(numeroTemporada, id)
+        let episodios = peticion.episodes
+        setCapitulosTemporada(episodios)
+      }
+    useEffect(()=>{
+       cambiarCapitulos(1, id)
+    },[])
     return (
+       
         <div className="temporadas">
             <div>
                 <h1 className="titulo__temporadas">Episodios</h1>
             </div>
             <div className="temporadas__numeroTemporada">
                 {
-                    seasons.filter((season) => (season.name !== "Especiales")).map((season, index) => (
-                        <NumeroTemporada id={id} setCapitulosTemporada={setCapitulosTemporada} season={season} temporada={season.name} index={index} />
+                    seasons.filter((season) => (season.name !== "Especiales")).map((season, index) => (    
+                            <NumeroTemporada setTemporadaSelect={setTemporadaSelect} temporadaSelect={temporadaSelect} id={id} setCapitulosTemporada={setCapitulosTemporada} season={season} temporada={season.name} index={index} />
                     ))
                 }
             </div>

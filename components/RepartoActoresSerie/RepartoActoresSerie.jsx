@@ -3,7 +3,7 @@ import '../RepartoActores/repartoActores.css'
 import TarjetaActor from "../TarjetaActor/TarjetaActor"
 import Link from "next/link"
 
-const RepartoActores = ( {reparto, id, data} )=>{
+const RepartoActoresSerie = ( {reparto, id, data} )=>{
     
     console.log({reparto})
     console.log({data})
@@ -21,7 +21,7 @@ const RepartoActores = ( {reparto, id, data} )=>{
          }
             </div>
             <div style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
-                <Link href={`/detalle/${id}/${id}`}>
+                <Link href={`/detalleSerie/${id}/${id}`}>
                 <button style={{fontSize:"12px", color:"white", background:"none", cursor:"pointer", border:"none", fontWeight:"bold"}}>Ver mas</button>
                 </Link>
             </div>
@@ -32,4 +32,4 @@ const RepartoActores = ( {reparto, id, data} )=>{
         </div>
     )
 }
-export default RepartoActores
+export default RepartoActoresSerie

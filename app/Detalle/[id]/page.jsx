@@ -14,7 +14,7 @@ async function Prueba({ params }) {
   return (
     <>
       <Detalle data={data} />
-      <RepartoActores reparto={reparto} id={id} />
+      <RepartoActores reparto={reparto} id={id} data={data} />
     </>
   );
 }

@@ -12,9 +12,17 @@
     width: 100%;
     border-bottom: 2px solid white;
     padding-left: 25px;
+
 }
 .temporadas__numeroTemporada{
     display: flex;
     gap: 10px;
     padding-left: 15px;
+}
+
+.temporadas__numeroTemporadaOn{
+    display: flex;
+    gap: 10px;
+    padding-left: 15px;
+    border-bottom: 2px solid white;
 }

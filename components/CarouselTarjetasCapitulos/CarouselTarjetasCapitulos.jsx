@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import TarjetaCapitulo from "../TarjetaCapitulo/TarjetaCapitulo";
+import { useState } from "react";
 
 export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
     const CustomPrevArrow = (props) => (
@@ -54,7 +55,10 @@ export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
       },
     ],
   };
+  const [capitulos, setCapitulos] = useState(capitulosTemporada)
 
+
+  console.log({capitulosTemporada})
   return (
     <div style={{padding:"0px"}}>
       <Slider {...settings}>

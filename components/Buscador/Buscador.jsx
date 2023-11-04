@@ -3,25 +3,23 @@ import React, { useState } from 'react';
 import { TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import '../Buscador/buscador.css'
-import { Search, buscarPelicula } from '@/app/peticionesFetch/page';
+import { Search } from '@/app/peticionesFetch/page';
+import MapeoSectionSeries from '../MapeoSectionSeries/MapeoSectionSeries';
 
-
-
-const Buscador = () => {
-const [estado, setEstado] = useState("")
+const Buscador = (  ) => {
   const formik = useFormik({
     initialValues: {
       nombre: '',
     },
-    onSubmit: (values) => {
-     const peticion = Search(values.nombre)
-      setEstado(peticion)
+    onSubmit: async function (values)  {
+      console.log({values})
+      let peticion =  await Search(values.nombre)
+      handleSearch(peticion)
     },
     validateOnChange: false,
   });
 
 
-  console.log(estado)
   return (
     <div className='buscador'>
       <form onSubmit={formik.handleSubmit}>
@@ -35,7 +33,7 @@ const [estado, setEstado] = useState("")
         <button className='buscador__boton' type='submit'>Buscar</button>
       </form>
     </div>
-  );
+    )
 };
 
 export default Buscador;
