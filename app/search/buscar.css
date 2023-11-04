@@ -2,6 +2,8 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
+    border: 1px solid red;
+    justify-content: center;
 }
 .buscador {
     width: 100%;

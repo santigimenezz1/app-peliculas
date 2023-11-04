@@ -13,9 +13,6 @@ const Temporadas = ({ data }) => {
     const [capitulosTemporada, setCapitulosTemporada] = useState([])
     const [temporadaSelect, setTemporadaSelect] = useState(1)
 
-    console.log({idTemporada1})
-    console.log({capitulosTemporada})
-    console.log({seasonsFiltrado})
 
     async function cambiarCapitulos (numeroTemporada, id ){
         let peticion = await peticionCapituloTemporada(numeroTemporada, id)

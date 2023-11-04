@@ -58,7 +58,6 @@ export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
   const [capitulos, setCapitulos] = useState(capitulosTemporada)
 
 
-  console.log({capitulosTemporada})
   return (
     <div style={{padding:"0px"}}>
       <Slider {...settings}>

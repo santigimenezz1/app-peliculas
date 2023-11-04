@@ -12,7 +12,6 @@ const Buscador = (  ) => {
       nombre: '',
     },
     onSubmit: async function (values)  {
-      console.log({values})
       let peticion =  await Search(values.nombre)
       handleSearch(peticion)
     },

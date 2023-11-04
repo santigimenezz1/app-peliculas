@@ -14,7 +14,6 @@ const Buscar = ( ) => {
       nombre: '',
     },
     onSubmit: async function (values)  {
-      console.log({values})
       let peticion =  await Search(values.nombre)
       let result = await peticion.results
       setEstado(result)
@@ -23,7 +22,6 @@ const Buscar = ( ) => {
   });
 
 
-  console.log(estado)
   return (
     <div className='buscador'>
       <form onSubmit={formik.handleSubmit}>

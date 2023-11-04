@@ -10,7 +10,6 @@ async function DetalleSeries({ params }) {
   let reparto = await RepartoSerie(params.id);
 
 
-  console.log({data})
     return (
     <>
     <DetalleSerie data={data}/>

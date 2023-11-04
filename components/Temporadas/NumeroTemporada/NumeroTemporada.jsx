@@ -11,7 +11,6 @@ const NumeroTemporada = ( {season, temporada, index, setCapitulosTemporada, id, 
       setCapitulosTemporada(capitulos)
     }
 
-    console.log({id})
   
     return (
         <div onClick={()=>cambiarCapitulos(numero, id )} className="numeroTemporada">

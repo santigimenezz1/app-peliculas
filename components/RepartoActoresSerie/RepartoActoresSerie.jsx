@@ -5,8 +5,6 @@ import Link from "next/link"
 
 const RepartoActoresSerie = ( {reparto, id, data} )=>{
     
-    console.log({reparto})
-    console.log({data})
     return (
         <div>
             <h1 className="titulo__repartoActores">Reparto</h1>

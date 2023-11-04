@@ -4,7 +4,6 @@
     border: none;
     border-radius: 12px;
     position: relative;
-    border: 3px solid black;
     transition: all .4s;
     cursor: pointer;
     margin: 10px;

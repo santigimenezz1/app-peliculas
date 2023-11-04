@@ -66,7 +66,6 @@ export default function CarouselTarjetasPelicula({ data, text }) {
 
   return (
     <div style={{ paddingLeft: "35px", paddingRight: "35px" }}>
-      <h1 style={{ color: "white", fontSize: "30px", letterSpacing: "2px" }}>{text}</h1>
       <Slider {...settings}>
         {data.results.map((movie) => (
          <Link href={`/detalle/${movie.id}`}>

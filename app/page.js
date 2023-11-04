@@ -27,13 +27,14 @@ export default async function Home() {
   return (
    <>
    <FondoDinamico />
-   <CarouselTarjetasPelicula data={data} text={"Lo mas popular"} />
+
+   <CarouselTarjetasSerie data={data} text={"Lo mas popular"} />
    <CarouselTarjetasSerie data={nuevasPeliculas} text={"Recientes"}  />
    <CarouselTarjetasSerie data={peliculasSeViene} text={"Lo que se viene"} />
    <FondoInteractivo />
    <CarouselTarjetasSerie data={peliculasTendecia} text={"Tendencia"} />
-   <CarouselTarjetasPelicula data={data}  />
-   <CarouselTarjetasPelicula data={nuevasPeliculas} />
+   <CarouselTarjetasSerie data={data}  />
+   <CarouselTarjetasSerie data={nuevasPeliculas} />
    </>
   )
 }

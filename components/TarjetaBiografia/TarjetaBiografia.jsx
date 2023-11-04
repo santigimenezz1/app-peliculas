@@ -6,9 +6,6 @@ async function TarjetaBiografia ( {trabajo} ){
     let type = await trabajo.media_type
     let peticionPelicula = await buscarPelicula(type, idTrabajo)
 
-    console.log({idTrabajo})
-    console.log({type})
-    console.log({peticionPelicula})
 
     
     const urlImagen = `https://image.tmdb.org/t/p/original/${trabajo.poster_path}`
