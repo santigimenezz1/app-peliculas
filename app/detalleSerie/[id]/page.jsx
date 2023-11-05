@@ -11,12 +11,12 @@ async function DetalleSeries({ params }) {
 
 
     return (
-    <>
+    <div>
     <DetalleSerie data={data}/>
     <Temporadas data={data} />
     <RepartoActoresSerie reparto={reparto} id={params.id} data={data} />
 
-    </>
+    </div>
   );
 }
 
