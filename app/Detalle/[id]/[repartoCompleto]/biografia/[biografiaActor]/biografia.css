@@ -5,6 +5,7 @@
     height: auto;
     justify-content: center;
     margin-bottom: 100px;
+    margin-top: 70px;
 
 }
 .biografia img{
@@ -30,4 +31,5 @@
 .biografia__info__infoPersonal h2{
    font-size: 15px;
 }
+
 

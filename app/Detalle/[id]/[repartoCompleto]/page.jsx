@@ -12,9 +12,10 @@ async function repartoCompleto({ params }) {
 
   return (
     <div className="repartoCompleto">
-      {
+      <div>
       <HeaderReparto pelicula={pelicula} />
-      }
+      </div>
+      
       <div className="repartoCompletoTarjetas">
         <div className="contaier__repartoCompleto">
           <h1>Reparto</h1>

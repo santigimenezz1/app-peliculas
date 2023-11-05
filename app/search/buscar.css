@@ -2,14 +2,14 @@
     display: flex;
     flex-wrap: wrap;
     padding: 20px;
-    border: 1px solid red;
     justify-content: center;
 }
 .buscador {
     width: 100%;
     padding: 10px;
     font-size: 30px;
-    width: 100%;    
+    width: 100%; 
+    margin-top: 70px;   
   }
   
   .buscador__input {
