@@ -1,11 +1,11 @@
- "use client"
-import TarjetaBiografia from '@/components/TarjetaBiografia/TarjetaBiografia'
-import '../[biografiaActor]/biografiaActor.css'
+"use client"
+import './biografia.css'
 import { peticionPersonaBiografia, peticionTrabajosActor } from '@/app/peticionesFetch/page'
 import Link from 'next/link'
 import BotonVolver from '@/components/BotonVolver/BotonVolver'
+import TarjetaBiografia from '@/components/TarjetaBiografia/TarjetaBiografia'
 
-async function BiografiaActor ( {params} ){
+async function Biografia ( {params} ){
     let idActor = await params.biografiaActor
     let peticionActor = await peticionPersonaBiografia(idActor)
     let trabajosBiografia = await peticionTrabajosActor(idActor)
@@ -47,4 +47,4 @@ async function BiografiaActor ( {params} ){
         </>
     )
 }
-export default BiografiaActor
+export default Biografia

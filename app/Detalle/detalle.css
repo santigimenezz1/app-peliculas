@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     gap: 50px;
+    margin-top: 70px;
 }
 .detalle__imagenPrincipal{
     z-index: 2;

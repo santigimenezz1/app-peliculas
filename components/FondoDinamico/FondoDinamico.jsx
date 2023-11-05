@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './fondoDinamico.css'
 import CarouselTarjetasSerie from '../CarouselTarjetasSerie/CarouselTarjetasSerie'
@@ -9,9 +10,7 @@ async function FondoDinamico () {
 
   return (
     <div className='fondoDinamico'>
-      <div className='fondoDinamico__tarjetas'>
-      <CarouselTarjetasPelicula data={data} text={"Lo mas popular"} />
-      </div>
+     
     <div className='fondoDinamico__info'>
     <h1>Titulo de la pelicula</h1>
     <h4>Duracion de la pelicula</h4>

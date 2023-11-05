@@ -26,8 +26,10 @@ export default async function Home() {
 
   return (
    <>
+   <div style={{marginTop:"70px"}}>
    <FondoDinamico />
-
+   </div>
+   <div className='container__general'>
    <CarouselTarjetasSerie data={data} text={"Lo mas popular"} />
    <CarouselTarjetasSerie data={nuevasPeliculas} text={"Recientes"}  />
    <CarouselTarjetasSerie data={peliculasSeViene} text={"Lo que se viene"} />
@@ -35,6 +37,7 @@ export default async function Home() {
    <CarouselTarjetasSerie data={peliculasTendecia} text={"Tendencia"} />
    <CarouselTarjetasSerie data={data}  />
    <CarouselTarjetasSerie data={nuevasPeliculas} />
+   </div>
    </>
   )
 }

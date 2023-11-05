@@ -1,0 +1,13 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(70, 70, 141);
+    margin-top: 50px;
+}
+.footer img{
+ width: 200px;
+}
+.footer h1{
+    font-size: 15px;
+   }

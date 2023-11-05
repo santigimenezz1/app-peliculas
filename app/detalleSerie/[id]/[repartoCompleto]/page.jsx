@@ -2,6 +2,7 @@ import HeaderReparto from "@/components/HeaderReparto/HeaderReparto";
 import '../../../detalle/[id]/[repartoCompleto]/repartoCompleto.css'
 import TarjetaActor from "@/components/TarjetaActor/TarjetaActor";
 import {  RepartoSerie, buscarPelicula } from "@/app/peticionesFetch/page";
+import Link from "next/link";
 
 async function repartoCompletoSerie({ params }) {
   let reparto = await RepartoSerie(params.id);
@@ -19,7 +20,9 @@ async function repartoCompletoSerie({ params }) {
           <div className="repartoCompletoTarjetas__cast">
             {
               reparto.cast.map((actor) => (
+                <Link href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
                 <TarjetaActor key={actor.cast_id} actor={actor} />
+                </Link>
               ))}
           </div>
         </div>
@@ -28,7 +31,9 @@ async function repartoCompletoSerie({ params }) {
           <div className="repartoCompletoTarjetas__cast">
             {
               reparto.crew.map((actor) => (
-                <TarjetaActor key={actor.cast_id} actor={actor} />
+                <Link href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
+                <TarjetaActor key={actor.crew_id} actor={actor} />
+                </Link>
               ))}
           </div>
         </div>

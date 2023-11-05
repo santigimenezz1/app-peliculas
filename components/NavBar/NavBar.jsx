@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <div className='navBar'>
       <Link href={'/'}>
-      <img src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1698619938/App%20peliculas/gxyakkliyxvrdhfwm5k5.png'></img>
+      <img src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699209536/E-COMERCE%20CODER/29c6fee-blue_short_oraeed.svg'></img>
       </Link>
       <div className='navBar__enlaces'>
        <ul>

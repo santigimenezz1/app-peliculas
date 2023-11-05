@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer/Footer'
 import NavBar from '../components/NavBar/NavBar'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -17,9 +18,7 @@ export default function RootLayout({ children }) {
           <NavBar />
         </nav>
         {children}
-        <footer style={{width:"100%", border:"1px solid red", padding:"10px"}}>
-          <h1 style={{color:"white"}}>Este es el footer de toda la App</h1>
-        </footer>
+        <Footer />
       </body>
     </html>
   )
