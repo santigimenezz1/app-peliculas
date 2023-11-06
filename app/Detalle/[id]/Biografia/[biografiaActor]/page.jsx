@@ -4,6 +4,7 @@ import '../[biografiaActor]/biografiaActor.css'
 import { peticionPersonaBiografia, peticionTrabajosActor } from '@/app/peticionesFetch/page'
 import Link from 'next/link'
 import BotonVolver from '@/components/BotonVolver/BotonVolver'
+import LoadingBiografia from './loading'
 
 async function BiografiaActor ( {params} ){
     let idActor = await params.biografiaActor

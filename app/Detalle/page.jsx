@@ -11,6 +11,7 @@ const Detalle = ( {data} ) => {
   const urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`
 
   return (
+    <>
     <div className='detalle'>
         <div className='detalle__imagenPrincipal'>
       <TarjetaImagenDetalle urlImagen={urlImagen}/>
@@ -38,6 +39,7 @@ const Detalle = ( {data} ) => {
       </div>
 
     </div>
+    </>
   )
 }
 

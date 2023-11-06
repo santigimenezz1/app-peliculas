@@ -9,10 +9,6 @@ async function Peliculas () {
   const peliculasPopulares = await peticionPeliculaspPopulares ()
   const peliculasTendencia = await peticionPeliculasTendencia ()
   const peliculasSeViene = await peticionPeliculasSeViene ()
-
-
-
-  
   return (
     <div className='series'>
       <h1>Pelciulas</h1>

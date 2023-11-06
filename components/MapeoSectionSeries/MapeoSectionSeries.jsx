@@ -3,13 +3,7 @@ import React from "react"
 import TarjetaSerie from "../TarjetaSerie/TarjetaSerie"
 import '../../app/series/series.css'
 import Link from "next/link"
- async function MapeoSectionSeries({funcion}){
-
-  
-    const seriesPopulares = await peticionSeriesPopulares()
-    const seriesTendencia = await peticionSeriesTendencia()
-    const seriesEnElAire = await peticionSeriesEnElAire()
-  
+ async function MapeoSectionSeries({funcion, seriesPopulares, seriesTendencia, seriesEnElAire}){
     return (
       <div className='series'>
         <h1>Series</h1>

@@ -4,6 +4,7 @@ import DetalleSerie from "../page";
 import CarouselTarjetasCapitulos from "@/components/CarouselTarjetasCapitulos/CarouselTarjetasCapitulos";
 import Temporadas from "@/components/Temporadas/Temporadas";
 import RepartoActoresSerie from "@/components/RepartoActoresSerie/RepartoActoresSerie";
+import LoadingRepartoDetalleSerie from "./loading";
 
 async function DetalleSeries({ params }) {
   let data = await buscarPelicula("tv" ,params.id);

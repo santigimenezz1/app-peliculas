@@ -3,6 +3,7 @@ import '../[repartoCompleto]/repartoCompleto.css';
 import TarjetaActor from "@/components/TarjetaActor/TarjetaActor";
 import { RepartoPelicula, buscarPelicula } from "@/app/peticionesFetch/page";
 import Link from "next/link";
+import LoadingRepartoCompleto from "./loading";
 
 async function repartoCompleto({ params }) {
   let reparto = await RepartoPelicula(params.id);
@@ -11,6 +12,7 @@ async function repartoCompleto({ params }) {
  
 
   return (
+    <>
     <div className="repartoCompleto">
       <div>
       <HeaderReparto pelicula={pelicula} />
@@ -41,6 +43,7 @@ async function repartoCompleto({ params }) {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
