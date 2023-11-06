@@ -4,10 +4,6 @@ import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImage
 import BotonVer from '@/components/BotonVer/BotonVer'
 
 const Detalle = ( {data} ) => {
-  if (!data) {
-    // Verifica si los datos aún no se han cargado
-    return null;
-  }
   const urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`
 
   return (
