@@ -27,50 +27,24 @@ export default function CarouselTarjetasPelicula({ data, text }) {
 
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,  // Cambiar a 'true' para hacer un ciclo infinito de tarjetas.
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 1,  // Cambiar a 1 para mostrar una tarjeta a la vez.
+    slidesToScroll: 1,  // Cambiar a 1 para desplazarse una tarjeta a la vez.
     initialSlide: 0,
     prevArrow: <CustomPrevArrow />,
     nextArrow: <CustomNextArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-        },
-      },
-    ],
   };
 
   return (
-    <div style={{ paddingLeft: "35px", paddingRight: "35px" }}>
+    <div className='container__carouselPelicula' style={{ paddingLeft: "35px", paddingRight: "35px" }}>
       <Slider {...settings}>
         {data.results.map((movie) => (
-         <Link href={`/detalle/${movie.id}`}>
-         <TarjetaPelicula movie={movie} />
-         </Link>
+          <div key={movie.id} style={{ width: "100%" }}>
+            <Link href={`/detalle/${movie.id}`}>
+              <TarjetaPelicula movie={movie} />
+            </Link>
+          </div>
         ))}
       </Slider>
     </div>

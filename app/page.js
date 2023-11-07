@@ -28,7 +28,7 @@ export default async function Home() {
   return (
    <>
    <div style={{marginTop:"70px"}}>
-   <FondoDinamico />
+   <CarouselTarjetasPelicula data={data} />
    </div>
    <div className='container__general'>
    <CarouselTarjetasSerie data={data} text={"Lo mas popular"} />

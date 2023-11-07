@@ -12,8 +12,8 @@ async function FondoDinamico () {
     <div className='fondoDinamico'>
      
     <div className='fondoDinamico__info'>
-    <h1>Titulo de la pelicula</h1>
-    <h4>Duracion de la pelicula</h4>
+    <h1>La reina de los concursos (2023)</h1>
+    <h4>Duracion: 1h 40m</h4>
     </div>
     <img src='https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699067867/App%20peliculas/compose_1_q5wh5y.jpg'></img>
     </div>

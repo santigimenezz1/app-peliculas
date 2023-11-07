@@ -6,7 +6,6 @@ const TarjetaPelicula = ( {movie} ) => {
 
   return (
     <div className='tarjetaPelicula'>
-      <h1 className='tarjetaPelicula__titulo'>{movie.title}</h1>
     <img className='tarjetaPelicula__img' src={urlImagen}></img>
     </div>
   )

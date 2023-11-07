@@ -12,13 +12,13 @@
 
 .fondoDinamico__info{
     position: absolute;
-    top: 10%;
+    top: 30%;
     left: 5%;
     color: white;
 }
 
 .fondoDinamico__info h1{
-   font-size: 40px;
+   font-size: 60px;
 }
 
 .fondoDinamico__info h4{
