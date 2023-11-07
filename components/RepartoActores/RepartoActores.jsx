@@ -2,6 +2,8 @@ import React from "react"
 import '../RepartoActores/repartoActores.css'
 import TarjetaActor from "../TarjetaActor/TarjetaActor"
 import Link from "next/link"
+import '@/app/mediaQuery.css'
+
 
 const RepartoActores = ( {reparto, id, data} )=>{
     

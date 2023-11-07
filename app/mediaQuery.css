@@ -1,0 +1,20 @@
+@media screen and (max-width: 1000px) {
+ .tarjetaSerie{
+    width: 280px;
+ }
+
+
+ .detalle__info__description{
+   width: 500px;
+ }
+.tarjetaActor img{
+   width: 20px;
+}
+.tarjetaActor{
+   border: 1px solid red;
+}
+.repartoActores__tarjetas{
+   flex-wrap: wrap;
+   width: 50%;
+}
+}

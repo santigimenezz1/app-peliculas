@@ -2,6 +2,8 @@ import React from 'react'
 import './detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
 import BotonVer from '@/components/BotonVer/BotonVer'
+import '@/app/mediaQuery.css'
+
 
 const Detalle = ( {data} ) => {
   const urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`

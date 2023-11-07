@@ -17,6 +17,7 @@ import RepartoActores from '@/components/RepartoActores/RepartoActores'
 import Temporadas from '@/components/Temporadas/Temporadas'
 import FondoInteractivo from '@/components/FondoInteractivo/FondoInteractivo'
 import peticionPeliculas from './peticionesFetch/page'
+import '../app/mediaQuery.css'
 export default async function Home() {
   
  let data = await peticionPeliculaspPopulares()

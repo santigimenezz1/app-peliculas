@@ -1,6 +1,7 @@
 import React from 'react'
 import './tarjetaSerie.css'
 import Link from 'next/link'
+import '@/app/mediaQuery.css'
 
 const TarjetaSerie = ( {movie} ) => {
   const urlImagen = `https://image.tmdb.org/t/p/original/${movie.poster_path}`
