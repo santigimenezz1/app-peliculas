@@ -5,6 +5,7 @@ import {  RepartoSerie, buscarPelicula } from "@/app/peticionesFetch/page";
 import Link from "next/link";
 
 async function repartoCompletoSerie({ params }) {
+  let idSerie = await params.id
   let reparto = await RepartoSerie(params.id);
   let pelicula = await buscarPelicula("tv", params.id);
 
@@ -12,7 +13,7 @@ async function repartoCompletoSerie({ params }) {
     <div className="repartoCompleto">
       {
         
-      <HeaderReparto pelicula={pelicula} />
+      <HeaderReparto idSerie={idSerie} pelicula={pelicula} />
       }
       <div className="repartoCompletoTarjetas">
         <div className="contaier__repartoCompleto">

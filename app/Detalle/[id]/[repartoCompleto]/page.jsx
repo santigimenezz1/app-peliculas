@@ -6,6 +6,7 @@ import Link from "next/link";
 import LoadingRepartoCompleto from "./loading";
 
 async function repartoCompleto({ params }) {
+  let idPelicula = await params.id
   let reparto = await RepartoPelicula(params.id);
   let pelicula = await buscarPelicula("movie", params.id);
 
@@ -15,7 +16,7 @@ async function repartoCompleto({ params }) {
     <>
     <div className="repartoCompleto">
       <div>
-      <HeaderReparto pelicula={pelicula} />
+      <HeaderReparto idPelicula={idPelicula} pelicula={pelicula} />
       </div>
       
       <div className="repartoCompletoTarjetas">
