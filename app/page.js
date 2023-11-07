@@ -18,6 +18,8 @@ import Temporadas from '@/components/Temporadas/Temporadas'
 import FondoInteractivo from '@/components/FondoInteractivo/FondoInteractivo'
 import peticionPeliculas from './peticionesFetch/page'
 import '../app/mediaQuery.css'
+import TarjetaColeccion from '@/components/TarjetasColeccion/TarjetaColeccion/TarjetaColeccion'
+import TarjetasColeccion from '@/components/TarjetasColeccion/TarjetasColeccion'
 export default async function Home() {
   
  let data = await peticionPeliculaspPopulares()
@@ -29,6 +31,7 @@ export default async function Home() {
    <>
    <div style={{marginTop:"70px"}}>
    <CarouselTarjetasPelicula data={data} />
+   <TarjetasColeccion />
    </div>
    <div className='container__general'>
    <CarouselTarjetasSerie data={data} text={"Lo mas popular"} />

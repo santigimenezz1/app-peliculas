@@ -1,13 +1,15 @@
 .tarjetaPelicula {
     width: 98%;
-    height: 400px;
+    height: 360px;
     border: none;
     border-radius: 12px;
     position: relative;
     transition: all .4s;
     cursor: pointer;
     margin: 10px;
-    overflow: hidden; /* Para ocultar el desbordamiento del título */
+    overflow: hidden; 
+    box-shadow: rgba(0, 0, 0, 0.69) 0px 16px 10px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px
+
 }
 
 .tarjetaPelicula h1 {
@@ -22,8 +24,9 @@
     text-align: center;
 }
 .tarjetaPelicula {
+    border: 3px solid rgb(20, 22, 31);
     position: relative;
-    /* Otras propiedades de estilo para tu tarjeta */
+    transition: all .2s;
 }
 
 .tarjetaPelicula:hover {
@@ -42,6 +45,5 @@
     padding: 2px;
     object-fit: cover;
     z-index: -1;
-    opacity: 0.8;
 }
 

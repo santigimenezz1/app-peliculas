@@ -10,7 +10,6 @@ async function FondoDinamico () {
 
   return (
     <div className='fondoDinamico'>
-     
     <div className='fondoDinamico__info'>
     <h1>La reina de los concursos (2023)</h1>
     <h4>Duracion: 1h 40m</h4>
