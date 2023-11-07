@@ -11,6 +11,9 @@ async function Prueba({ params }) {
   let reparto = await RepartoPelicula(params.id)
   let id = params.id
   let test= reparto.cast
+
+
+  console.log({data})
   return (
     <>
       < Detalle data={data} />

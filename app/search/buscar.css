@@ -67,3 +67,17 @@
     align-items: center;
     margin-bottom: 200px;
 }
+
+.loading{
+  position: absolute;
+  top: 40vh;
+  left: 45%;
+  z-index: 20;
+}
+.loadingOff{
+  position: absolute;
+  top: 40vh;
+  left: 55%;
+  z-index: 20;
+  display: none;
+}

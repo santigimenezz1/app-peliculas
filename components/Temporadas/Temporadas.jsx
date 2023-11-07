@@ -4,7 +4,7 @@ import '../Temporadas/temporadas.css'
 import NumeroTemporada from "./NumeroTemporada/NumeroTemporada"
 import TarjetaCapitulo from "../TarjetaCapitulo/TarjetaCapitulo"
 import CarouselTarjetasCapitulos from "../CarouselTarjetasCapitulos/CarouselTarjetasCapitulos"
-import { peticionCapituloTemporada } from "@/app/peticionesFetch/page"
+import { peticionCapituloTemporada} from "@/app/peticionesFetch/page"
 const Temporadas = ({ data }) => {
     let seasons = data.seasons
     let id = data.id
@@ -22,6 +22,9 @@ const Temporadas = ({ data }) => {
     useEffect(()=>{
        cambiarCapitulos(1, id)
     },[])
+
+
+    console.log({seasonsFiltrado})
     return (
        
         <div className="temporadas">

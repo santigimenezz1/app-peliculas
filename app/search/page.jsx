@@ -1,28 +1,41 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { TextField } from '@mui/material';
 import { useFormik } from 'formik';
 import { Search } from '@/app/peticionesFetch/page';
 import TarjetaSerie from '@/components/TarjetaSerie/TarjetaSerie';
 import '../search/buscar.css'
 import Link from 'next/link';
+import LoadingPersonalizado from '@/components/LoadingPersonalizado/LoadingPersonalizado';
 
 const Buscar = ( ) => {
   const [estado, setEstado] = useState([])
+  const [loading, setLoading] = useState(false)
   const formik = useFormik({
     initialValues: {
       nombre: '',
     },
     onSubmit: async function (values)  {
+        setLoading(true)
       let peticion =  await Search(values.nombre)
       let result = await peticion.results
       setEstado(result)
+      setLoading(false)
     },
     validateOnChange: false,
   });
 
+  useEffect(()=>{
+    estado.length > 0 &&
+   setLoading(false)
+  },[estado])
+
 
   return (
+    <div style={{position:"relative"}}>
+    <div className={loading ?'loading' :'loadingOff'}>
+    <LoadingPersonalizado />
+    </div>
     <div className='buscador'>
       <form onSubmit={formik.handleSubmit}>
         <input 
@@ -58,6 +71,7 @@ const Buscar = ( ) => {
   )
 }
       </div>
+    </div>
     </div>
     )
 };

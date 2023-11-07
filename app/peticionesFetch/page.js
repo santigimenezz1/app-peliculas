@@ -75,6 +75,7 @@ export async function peticionPeliculasNuevas() {
     console.error('Error en la solicitud:', error);
   }
 }
+
 export async function buscarPelicula(type, id) {
   const apiKey = '641eb2676131a3aa4fafc93460d6ae1f';
   const tmdbBaseUrl = 'https://api.themoviedb.org/3';
@@ -156,7 +157,6 @@ export async function peticionSeriesTendencia() {
     console.error('Error en la solicitud:', error);
   }
 }
-
 export async function peticionSeriesEnElAire() {
   const apiKey = '641eb2676131a3aa4fafc93460d6ae1f';
   const tmdbBaseUrl = 'https://api.themoviedb.org/3';
@@ -215,6 +215,7 @@ export async function RepartoSerie( id) {
     console.error('Error en la solicitud:', error);
   }
 }
+
 
 
 //BIOGRAFIA
