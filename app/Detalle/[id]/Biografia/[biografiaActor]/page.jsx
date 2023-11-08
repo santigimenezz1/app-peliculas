@@ -5,6 +5,7 @@ import { peticionPersonaBiografia, peticionTrabajosActor } from '@/app/peticione
 import Link from 'next/link'
 import BotonVolver from '@/components/BotonVolver/BotonVolver'
 import LoadingBiografia from './loading'
+import BotonBack from '@/components/BotonBack/BotonBack'
 
 async function BiografiaActor ( {params} ){
     let idActor = await params.biografiaActor
@@ -15,9 +16,9 @@ async function BiografiaActor ( {params} ){
     const urlImagen = `https://image.tmdb.org/t/p/original/${peticionActor.profile_path}`
     return (
         <>
-        <Link href={'/'}>
-        <BotonVolver />
-        </Link>
+        <div className='botonVolver__biografia'>
+        <BotonBack  />
+        </div>
         <div className="biografia">
                 <img src={urlImagen}></img>
                 <div className="boigrafia__info">

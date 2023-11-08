@@ -2,6 +2,7 @@ import React from 'react'
 import MapeoSectionSeries from '@/components/MapeoSectionSeries/MapeoSectionSeries'
 import { peticionSeriesEnElAire, peticionSeriesPopulares, peticionSeriesTendencia } from '../peticionesFetch/page'
 import Loading from './loading'
+import CarouselTarjetasPelicula from '@/components/CarouselTarjetasPelicula/CarouselTarjetasPelicula'
 
 async function Series() {
     
