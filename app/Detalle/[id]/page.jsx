@@ -13,7 +13,6 @@ async function Prueba({ params }) {
   let test= reparto.cast
 
 
-  console.log({data})
   return (
     <>
       < Detalle data={data} />

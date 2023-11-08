@@ -65,15 +65,30 @@ export default function CarouselTarjetasSerie( {data ,text} ) {
 
   return (
     <div style={{padding:"30px"}}>
-      <h1 style={{color:"white", letterSpacing:"2px", fontSize:"30px"}}>{text}</h1>
+      <h1 style={{color:"white", letterSpacing:"4px", fontSize:"25px", paddingLeft:"15px"}}>{text}</h1>
       <Slider {...settings}>
-      {data.results.map((movie) => (
+      
+      {
+        data.results ?
+      data.results.map((movie) => (
           <div key={movie.id}>
             <Link href={`/detalle/${movie.id}`}>
             <TarjetaSerie movie={movie} />
             </Link>
           </div>
-        ))}
+        ))
+        :
+        data.parts.map((movie) => (
+          <div key={movie.id}>
+            <Link href={`/detalle/${movie.id}`}>
+            <TarjetaSerie movie={movie} />
+            </Link>
+          </div>
+        ))
+        
+
+        
+        }
       </Slider>
     </div>
   );

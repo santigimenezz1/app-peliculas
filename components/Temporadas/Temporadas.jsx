@@ -24,7 +24,6 @@ const Temporadas = ({ data }) => {
     },[])
 
 
-    console.log({seasonsFiltrado})
     return (
        
         <div className="temporadas">

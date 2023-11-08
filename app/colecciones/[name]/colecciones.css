@@ -1,0 +1,31 @@
+.colecciones {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  .colecciones__background {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699389982/App%20peliculas/scale_kmvedz.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2; /* Coloca el fondo detrás del contenido */
+  }
+  
+  .colecciones__tarjetas {
+    margin-top: 400px;
+    background-color: rgba(20, 22, 31, 0); /* Fondo inicialmente transparente */
+    transition: background-color 0.5s; /* Transición suave del color de fondo */
+  }
+  
+  
+  /* Agrega una clase para cambiar el fondo a gris cuando sea necesario */
+  .colecciones.scrolled .colecciones__tarjetas {
+    background: rgba(20, 22, 31, 1); /* Cambia el fondo a gris sólido */
+  }
+  
