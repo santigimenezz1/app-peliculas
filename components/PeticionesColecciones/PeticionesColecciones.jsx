@@ -4,8 +4,8 @@ const { default: TarjetaSerie } = require("../TarjetaSerie/TarjetaSerie")
 const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, coleccionToyStorie, national, starWars, coleccionVengadores, coleccionHulk, coleccionIronMan, coleccionSpiderman, coleccionCapitan, coleccionGuardianes }) => {
     return (
         <div class="colecciones">
-            <div class="colecciones__background"></div>
-            <div class="colecciones__tarjetas">
+      <div className={name === "marvel" ? "colecciones__background" : `colecciones__background${`${name}`}`}></div>
+            <div className="colecciones__tarjetas">
                 {
                     name === "marvel" &&
                     <>
