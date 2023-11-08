@@ -34,7 +34,7 @@ export default function CarouselTarjetasSerie( {data ,text} ) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
+          infinite: false,
           dots: false,
         },
       },
