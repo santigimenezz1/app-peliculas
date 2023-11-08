@@ -6,10 +6,7 @@ import TarjetaSerie from "../TarjetaSerie/TarjetaSerie";
 import Link from "next/link";
 
 export default function CarouselTarjetasSerie( {data ,text} ) {
-  if (!data) {
-    // Verifica si los datos aún no se han cargado
-    return null;
-  }
+
 
     const CustomPrevArrow = (props) => (
         <button className="slick-arrow slick-prev" onClick={props.onClick}>

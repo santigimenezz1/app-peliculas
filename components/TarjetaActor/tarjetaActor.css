@@ -1,12 +1,12 @@
 .tarjetaActor{
     width: 150px;
     border-radius: 7px;
-    border: 3px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
+    padding: 10px;
 }
 .tarjetaActor img{
   width: 100%;
@@ -26,11 +26,30 @@
 .tarjetaActor__info h2{
     font-size: 16px;
     cursor: pointer;
+    text-align: center;
 }
 .tarjetaActor__info h2:hover{
     color: rgb(116, 111, 111);
 }
 .tarjetaActor__info h3{
     font-size: 12px;
+    width: 100%;
+    text-align: center;
 }
 
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+    .tarjetaActor{
+        width: 110px; 
+    }
+    .tarjetaActor__info h2{
+        font-size: 12px;
+        cursor: pointer;
+    }
+  }

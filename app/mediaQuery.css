@@ -10,9 +10,7 @@
 .tarjetaActor img{
    width: 20px;
 }
-.tarjetaActor{
-   border: 1px solid red;
-}
+
 .repartoActores__tarjetas{
    flex-wrap: wrap;
    width: 50%;

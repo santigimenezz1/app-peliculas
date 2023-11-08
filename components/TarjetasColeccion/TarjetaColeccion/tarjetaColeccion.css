@@ -1,6 +1,6 @@
 .tarjetaColeccion {
-  width: 235px;
-  height: 130px;
+  max-width: 235px;
+  max-height: 130px;
   border-radius: 7px;
   background-color: rgb(26, 29, 41);
   cursor: pointer;

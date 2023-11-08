@@ -8,10 +8,6 @@ import './carouselTarjetaPelicula.css';
 import Link from 'next/link';
 
 export default function CarouselTarjetasPelicula({ data, text }) {
-  if (!data) {
-    // Verifica si los datos aún no se han cargado
-    return null;
-  }
 
   const CustomPrevArrow = (props) => (
     <button className="slick-arrow slick-prev" onClick={props.onClick}>
@@ -37,10 +33,10 @@ export default function CarouselTarjetasPelicula({ data, text }) {
   };
 
   return (
-    <div className='container__carouselPelicula' style={{ paddingLeft: "35px", paddingRight: "35px" }}>
+    <div className='container__carouselPelicula' style={{ paddingLeft: "35px", paddingRight: "35px"}}>
       <Slider {...settings}>
         {data.results.map((movie) => (
-          <div key={movie.id} style={{ width: "100%" }}>
+          <div  key={movie.id} style={{ width: "100%" }}>
             <Link href={`/detalle/${movie.id}`}>
               <TarjetaPelicula movie={movie} />
             </Link>

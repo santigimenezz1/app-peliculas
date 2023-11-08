@@ -9,7 +9,7 @@
     padding: 10px;
     font-size: 30px;
     width: 100%; 
-    margin-top: 70px;   
+    margin-top: 70px;
   }
   
   .buscador__input {
@@ -21,6 +21,7 @@
     outline: none;
     color: white;
     font-size: 40px;
+
   }
   
   .buscador__input::placeholder {
@@ -80,4 +81,23 @@
   left: 55%;
   z-index: 20;
   display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:1000px) {
+  .buscador__input{
+    width: 85%;
+  }
 }
