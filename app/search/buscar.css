@@ -101,3 +101,42 @@
     width: 85%;
   }
 }
+
+@media screen and (max-width:900px) {
+  .buscador__input{
+    width: 85%;
+  }
+  .titulo__sinBusqueda{
+  font-size: 4.5vw
+}
+}
+
+
+@media screen and (max-width:800px) {
+  .buscador__input{
+    width: 80%;
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .buscador__input{
+    width: 75%;
+  }
+
+}
+
+@media screen and (max-width:460px) {
+  .buscador__input{
+    width: 70%;
+  }
+
+}
+
+
+@media screen and (max-width:414px) {
+  .buscador__input{
+    width: 65%;
+  }
+
+}

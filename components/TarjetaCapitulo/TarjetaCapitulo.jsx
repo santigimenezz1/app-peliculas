@@ -6,10 +6,8 @@ const TarjetaCapitulo = ({capitulo, index}) => {
   let indexId = index + 1
   const urlImagen = `https://image.tmdb.org/t/p/original/${capitulo.still_path}`
   return (
-    <div className='tarjetaCapitulo'>
-      <div className='tarjetaPelicula'>
-     <img className='tarjetaPelicula__img' src={urlImagen}></img>
-    </div>
+    <div className='tarjetaCapitulo'> 
+     <img src={urlImagen}></img>
     <div className='tarjetaCapitulo__info'>
      <h1>{indexId}.{capitulo.name} ({capitulo.runtime}m)</h1>
      <span>{capitulo.overview}</span>

@@ -1,44 +1,26 @@
 .tarjetaCapitulo{
     width: 300px;
-    height: 340px;
+    height: 400px;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-
+    gap: 5px;
+}
+.tarjetaCapitulo img{
+ width: 100%;
 }
 
 .tarjetaCapitulo__info {
-   display: flex;
-   flex-direction: column;
-   padding-left: 10px;
-   
-   }
-.tarjetaCapitulo__info h1{
- color: white;
- font-size: 15px;
- 
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 5px;
 }
-.tarjetaCapitulo__info span{
-    color: white;
-    font-size: 12px;
-   }
-
-
-
-
-
-
-
-
-
-
-
-   
-@media screen and (max-width:1000px) {
-    .tarjetaCapitulo{
-        width: 280px;
-
+.tarjetaCapitulo__info h1 {
+   font-size: 18px;
     }
-  }
+    .tarjetaCapitulo__info span {
+        font-size: 14px;
+        padding: 5px;
+         }
