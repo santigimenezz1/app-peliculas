@@ -1,5 +1,5 @@
 import HeaderReparto from "@/components/HeaderReparto/HeaderReparto";
-import '../[repartoCompleto]/repartoCompleto.css';
+import '@/app/detalle/repartoCompleto.css';
 import TarjetaActor from "@/components/TarjetaActor/TarjetaActor";
 import { RepartoPelicula, buscarPelicula } from "@/app/peticionesFetch/page";
 import Link from "next/link";
