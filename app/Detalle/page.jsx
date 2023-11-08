@@ -1,17 +1,20 @@
+
 import React from 'react'
 import './detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
 import BotonVer from '@/components/BotonVer/BotonVer'
 import '@/app/mediaQuery.css'
+import { Button } from '@mui/base'
+import BotonBack from '@/components/BotonBack/BotonBack'
 
 
 const Detalle = ( {data} ) => {
   const urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`
-
   return (
     <>
     <div className='detalle'>
         <div className='detalle__imagenPrincipal'>
+          <BotonBack />
       <TarjetaImagenDetalle urlImagen={urlImagen}/>
         </div>
       <img className='detalle__imgFondo' src={urlImagen}></img>
