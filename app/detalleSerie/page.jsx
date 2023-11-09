@@ -1,6 +1,6 @@
  "use client"
 import React, { useState } from 'react'
-import '../detalle/detalle.css'
+import './detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
 import BotonVer from '@/components/BotonVer/BotonVer'
 import BotonBack from '@/components/BotonBack/BotonBack'
