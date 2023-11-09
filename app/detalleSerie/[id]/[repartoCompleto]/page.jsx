@@ -48,5 +48,4 @@ async function repartoCompletoSerie({ params }) {
     return <div>Error al cargar los datos.</div>;
   }
 }
-
 export default repartoCompletoSerie;
