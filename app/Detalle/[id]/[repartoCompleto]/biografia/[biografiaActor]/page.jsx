@@ -12,7 +12,6 @@ async function Biografia ( {params} ){
 
     let urlImagen = "";
 
-    let trabajosB = trabajosBiografia.cast
     if (peticionActor.profile_path) {
         urlImagen = `https://image.tmdb.org/t/p/original/${peticionActor.profile_path}`;
       }else{
