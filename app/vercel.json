@@ -1,19 +1,14 @@
 {
+    "build": {
+      "env": {
+        "IGNORE_BUILD_ERRORS": "1"
+      },
+      "cmd": "npm run custom-build-script"
+    },
     "functions": {
       "api/**/*.js": {
-        "runtime": "nodejs16.x",
-        "maxDuration": 30
+        "runtime": "nodejs14.x",
+        "memory": 1024
       }
-    },
-    "rewrites": [
-      {
-        "source": "/api/(.*)",
-        "function": "api/$1",
-        "error": {
-          "status": 200,
-          "description": "An error occurred but was ignored."
-        }
-      }
-    ]
+    }
   }
-  
