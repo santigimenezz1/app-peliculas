@@ -62,6 +62,7 @@ if (data.poster_path) {
     </>
   )
 }
+}
 
 export default Detalle
 
