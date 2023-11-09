@@ -115,6 +115,27 @@ export async function RepartoPelicula( id) {
     console.error('Error en la solicitud:', error);
   }
 }
+
+export async function buscarVideo(type, id) {
+  const apiKey = '641eb2676131a3aa4fafc93460d6ae1f';
+  const tmdbBaseUrl = 'https://api.themoviedb.org/3';
+  const endpoint = `${type}`;
+  const apiUrl = `${tmdbBaseUrl}/${endpoint}/${id}/videos?api_key=${apiKey}&language=es-ES`;
+  
+
+  try {
+    const response = await fetch(apiUrl);
+    // Verifica si la solicitud fue exitosa
+    if (response.ok) {
+      const data = await response.json();
+      return(data);
+    } else {
+      console.error('Error al recuperar datos de la API');
+    }
+  } catch (error) {
+    console.error('Error en la solicitud:', error);
+  }
+}
 //-------------------------------------------------------
 //SERIES
 export async function peticionSeriesPopulares() {

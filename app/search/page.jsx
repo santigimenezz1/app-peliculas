@@ -42,7 +42,7 @@ const Buscar = ( ) => {
         className='buscador__input'
           onChange={formik.handleChange}
           name='nombre'
-          placeholder='Buscar'
+          placeholder='Título, personaje o genero'
           value={formik.values.nombre}
         />
         <button className='buscador__boton' type='submit'>Buscar</button>

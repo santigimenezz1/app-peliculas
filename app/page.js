@@ -20,6 +20,8 @@ import peticionPeliculas from './peticionesFetch/page'
 import '../app/mediaQuery.css'
 import TarjetaColeccion from '@/components/TarjetasColeccion/TarjetaColeccion/TarjetaColeccion'
 import TarjetasColeccion from '@/components/TarjetasColeccion/TarjetasColeccion'
+import CarouselTarjetaHome from '@/components/CarouselTarjetaHome/CarouselTarjetaHome'
+import BotonVideoYoutube from '@/components/BotonVideoYoutube/BotonVideoYoutube'
 export default async function Home() {
   
  let data = await peticionPeliculaspPopulares()
@@ -27,20 +29,23 @@ export default async function Home() {
  let peliculasSeViene = await peticionPeliculasSeViene ()
  let nuevasPeliculas = await peticionPeliculasNuevas ()
 
+
   return (
    <>
+   <div style={{marginTop:"100px"}}>
+   </div>
    <div style={{marginTop:"70px"}}>
    <CarouselTarjetasPelicula data={data} />
    <TarjetasColeccion />
    </div>
    <div className='container__general'>
-   <CarouselTarjetasSerie data={data} text={"Lo mas popular"} />
+   <CarouselTarjetaHome data={data} text={"Lo mas popular"} />
+   <CarouselTarjetaHome data={peliculasSeViene} text={"Lo que se viene"} />
    <CarouselTarjetasSerie data={nuevasPeliculas} text={"Recientes"}  />
-   <CarouselTarjetasSerie data={peliculasSeViene} text={"Lo que se viene"} />
    <FondoInteractivo />
+   <CarouselTarjetaHome data={data}  />
+   <CarouselTarjetaHome data={nuevasPeliculas} />
    <CarouselTarjetasSerie data={peliculasTendecia} text={"Tendencia"} />
-   <CarouselTarjetasSerie data={data}  />
-   <CarouselTarjetasSerie data={nuevasPeliculas} />
    </div>
    </>
   )
