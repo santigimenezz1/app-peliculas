@@ -1,6 +1,5 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import '../detalle/detalle.css'
 import TarjetaImagenDetalle from '@/components/TarjetaImagenDetalle/TarjetaImagenDetalle'
 import BotonVer from '@/components/BotonVer/BotonVer'
 import '@/app/mediaQuery.css'
