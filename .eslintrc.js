@@ -28,8 +28,6 @@ module.exports = {
         "react"
     ],
     "rules": {
-        "@next/next/no-async-client-component": 1,
-        '@next/next/no-img-element': 'off',
-        'jsx-a11y/alt-text': 'off',
+      
     }
 }
