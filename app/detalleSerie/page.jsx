@@ -19,8 +19,6 @@ const DetalleSerie = ( {youtubeId, data} ) => {
     setShowVideo(false);
   };
 
-
-  console.log({youtubeId})
   return (
     <div className='detalle'>
         <div className='detalle__imagenPrincipal'>

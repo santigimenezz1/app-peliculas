@@ -16,7 +16,6 @@ async function Prueba({ params }) {
   let trailer = await video.results.filter((video)=>video.type === "Trailer")
   let idYoutube = await trailer[0].key
 
- console.log({idYoutube})
   return (
     <>
       < Detalle idYoutube={idYoutube} data={data} />
