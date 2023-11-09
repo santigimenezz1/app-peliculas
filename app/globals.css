@@ -8,6 +8,9 @@
 body{
   background-color: rgb(20, 22, 31)
 }
+.container__general__app{
+  margin-top: 70px;
+}
 
 @media screen and (max-width:1000px) {
 
@@ -18,5 +21,12 @@ body{
     width: 80%;
     border: 1px solid red;
   }
+}
+
+@media screen and (max-width:500px) {
+  .container__general__app{
+    margin-top: 5px;
+  }
+
 }
 

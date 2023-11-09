@@ -32,9 +32,7 @@ export default async function Home() {
 
   return (
    <>
-   <div style={{marginTop:"100px"}}>
-   </div>
-   <div style={{marginTop:"70px"}}>
+   <div className='container__general__app'>
    <CarouselTarjetasPelicula data={data} />
    <TarjetasColeccion />
    </div>
