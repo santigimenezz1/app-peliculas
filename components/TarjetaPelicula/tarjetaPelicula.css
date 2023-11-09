@@ -36,7 +36,6 @@
 .tarjetaPelicula:hover h1 {
     display: block;
 }
-
 .tarjetaPelicula__img{
     position: absolute;
     width: 100%;
