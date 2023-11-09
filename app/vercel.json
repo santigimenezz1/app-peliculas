@@ -1,0 +1,19 @@
+{
+    "functions": {
+      "api/**/*.js": {
+        "runtime": "nodejs16.x",
+        "maxDuration": 30
+      }
+    },
+    "rewrites": [
+      {
+        "source": "/api/(.*)",
+        "function": "api/$1",
+        "error": {
+          "status": 200,
+          "description": "An error occurred but was ignored."
+        }
+      }
+    ]
+  }
+  
