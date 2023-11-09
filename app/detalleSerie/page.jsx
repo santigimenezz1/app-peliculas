@@ -40,10 +40,10 @@ const DetalleSerie = ( {youtubeId, data} ) => {
           {data && data.title && <h1>{data.title} ({(data.release_date).slice(0, 4)})</h1>}
           {data && data.genres && data.genres.length > 0 && <h3>{data.genres[0].name}</h3>}
         </div>
-         <div className='detalle__info__description'>
-            <h1>Vista general</h1>
-            <span>{data.overview}</span>
-         </div>
+        <div className='detalle__info__description'>
+  <h1>Vista general</h1>
+  {data && data.overview ? <span>{data.overview}</span> : <span>No hay descripción disponible.</span>}
+</div>
          <div className='detalle__info__creador'>
             <h1>Vince Gilligan</h1>
             <h2>Creador</h2>
