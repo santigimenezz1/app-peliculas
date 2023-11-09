@@ -8,16 +8,25 @@ import BotonVideoYoutube from '@/components/BotonVideoYoutube/BotonVideoYoutube'
 import Video from '@/components/BotonVideoYoutube/Video/Video'
 
 const DetalleSerie = ( {youtubeId, data} ) => {
-  const urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`
   const [showVideo, setShowVideo] = useState(false);
   const [estadoBotonCerrar, setEstadoBotonCerrar] = useState(false)
   const openVideo = () => {
     setShowVideo(true);
   };
-
+  
   const closeVideo = () => {
     setShowVideo(false);
   };
+
+  let urlImagen = ""; 
+
+  if (data.poster_path) {
+    urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
+  }else{
+    urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699562010/App%20peliculas/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093_r2tucp.png"
+  }
+  
+
 
   return (
     <div className='detalle'>
