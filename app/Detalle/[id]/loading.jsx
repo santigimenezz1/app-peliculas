@@ -1,5 +1,5 @@
 import { Skeleton } from '@mui/material'
-import '../../detalle/[id]/loading.css'
+import './loading.css'
 const LoadingReparto = ()=>{
     return (
         <div className="loadingReparto">
