@@ -10,9 +10,13 @@ async function DetalleSeries({ params }) {
   let data = await buscarPelicula("tv" ,params.id);
   let video = await buscarVideo("tv", params.id)
   let reparto = await RepartoSerie(params.id);
+   let youtubeId = null;
 
-  let filter = video.results.filter((video)=>video.type === "Trailer")
-  let youtubeId = filter[0].key
+   let filter = video.results.filter((video) => video.type === "Trailer");
+   if (filter.length > 0 && filter[0].key) {
+     youtubeId = filter[0].key;
+   }
+ 
 
 
 
