@@ -31,7 +31,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
                     {
                         name === "starWars" &&
                         starWars.results.map((pelicula) => (
-                            <TarjetaSerie movie={pelicula} />
+                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
                         ))
                     }
                 </div>
@@ -39,7 +39,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
                     {
                         name === "national" &&
                         national.results.map((pelicula) => (
-                            <TarjetaSerie movie={pelicula} />
+                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
                         ))
                     }
                 </div>
@@ -47,7 +47,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
                     {
                         name === "disney" &&
                         disney.results.map((pelicula) => (
-                            <TarjetaSerie movie={pelicula} />
+                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
                         ))
                     }
                 </div>

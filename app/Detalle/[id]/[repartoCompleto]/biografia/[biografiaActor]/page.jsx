@@ -36,7 +36,7 @@ async function Biografia ( {params} ){
                         <div style={{display:"flex", gap:"10px"}}>
                             {
                                 trabajosBiografia.cast.slice(0,6).map((trabajo, index)=>(
-                                    <TarjetaBiografia  trabajo={trabajo}  />
+                                    <TarjetaBiografia key={index}  trabajo={trabajo}  />
 
                                 ))
                             }

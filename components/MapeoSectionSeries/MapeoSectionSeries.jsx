@@ -11,7 +11,7 @@ import Link from "next/link"
         <div className='series__tarjetas'>
           {
             seriesPopulares.results.slice(0, 12).map((serie) => (
-              <Link href={`/detalleSerie/${serie.id}`}>
+              <Link key={serie.id} href={`/detalleSerie/${serie.id}`}>
                 <TarjetaSerie movie={serie} />
               </Link>))
           }
@@ -20,7 +20,7 @@ import Link from "next/link"
             <div className='container__tarjetas__flex'>
               {
                 seriesTendencia.results.map((serie) => (
-                  <Link href={`/detalleSerie/${serie.id}`}>
+                  <Link key={serie.id} href={`/detalleSerie/${serie.id}`}>
                     <TarjetaSerie movie={serie} />
                   </Link>))
               }
@@ -31,7 +31,7 @@ import Link from "next/link"
             <div className='container__tarjetas__flex'>
               {
                 seriesEnElAire.results.map((serie) => (
-                  <Link href={`/detalleSerie/${serie.id}`}>
+                  <Link key={serie.id} href={`/detalleSerie/${serie.id}`}>
                     <TarjetaSerie movie={serie} />
                   </Link>))
               }

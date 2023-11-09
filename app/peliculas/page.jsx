@@ -16,7 +16,7 @@ async function Peliculas () {
       <div className='series__tarjetas'>
          {
           peliculasPopulares.results.slice(0,12).map((serie)=>(
-            <Link href={`/detalle/${serie.id}`}>
+            <Link key={serie.id} href={`/detalle/${serie.id}`}>
             <TarjetaSerie movie={serie} />
             </Link>          
             ))
@@ -26,7 +26,7 @@ async function Peliculas () {
          <div className='container__tarjetas__flex'>
         {
           peliculasTendencia.results.map((serie)=>(
-            <Link href={`/detalle/${serie.id}`}>
+            <Link key={serie.id} href={`/detalle/${serie.id}`}>
             <TarjetaSerie movie={serie} />
             </Link>           ))
          }
@@ -38,7 +38,7 @@ async function Peliculas () {
           {
 
       peliculasSeViene.results.map((serie)=>(
-        <Link href={`/detalle/${serie.id}`}>
+        <Link key={serie.id} href={`/detalle/${serie.id}`}>
         <TarjetaSerie movie={serie} />
         </Link>           ))
          }

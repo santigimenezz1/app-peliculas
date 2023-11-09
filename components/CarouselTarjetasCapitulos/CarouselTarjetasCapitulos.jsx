@@ -64,7 +64,7 @@ export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
         
           {
             capitulosTemporada.map((capitulo, index)=>(
-              <div>
+              <div key={index}>
               <TarjetaCapitulo capitulo={capitulo} index={index} />
               </div> 
             ))

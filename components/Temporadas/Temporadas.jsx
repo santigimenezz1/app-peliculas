@@ -33,7 +33,7 @@ const Temporadas = ({ data }) => {
             <div className="temporadas__numeroTemporada">
                 {
                     seasons.filter((season) => (season.name !== "Especiales")).map((season, index) => (    
-                            <NumeroTemporada setTemporadaSelect={setTemporadaSelect} temporadaSelect={temporadaSelect} id={id} setCapitulosTemporada={setCapitulosTemporada} season={season} temporada={season.name} index={index} />
+                            <NumeroTemporada key={index} setTemporadaSelect={setTemporadaSelect} temporadaSelect={temporadaSelect} id={id} setCapitulosTemporada={setCapitulosTemporada} season={season} temporada={season.name} index={index} />
                     ))
                 }
             </div>
