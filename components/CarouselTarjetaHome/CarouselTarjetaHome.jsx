@@ -20,44 +20,76 @@ export default function CarouselTarjetaHome( {data ,text} ) {
           Siguiente
         </button>
       );
-  const settings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    initialSlide: 0,
-    prevArrow: <CustomPrevArrow />,
-    nextArrow: <CustomNextArrow />,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: false,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          dots: false,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          dots: false,
-        },
-      },
-    ],
-  };
+      const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4, // Número predeterminado de tarjetas en una fila
+        slidesToScroll: 4, // Número predeterminado de tarjetas para desplazarse
+        initialSlide: 0,
+        prevArrow: <CustomPrevArrow />,
+        nextArrow: <CustomNextArrow />,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: false,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              initialSlide: 2,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 1000, // Agrega un breakpoint personalizado para 1000px
+            settings: {
+              slidesToShow: 3, // Cambia el número de tarjetas a 2 para 1000px o menos
+              slidesToScroll: 3, // Cambia el número de tarjetas para desplazarse a 2 para 1000px o menos
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 900, // Agrega un breakpoint personalizado para 1000px
+            settings: {
+              slidesToShow: 3, // Cambia el número de tarjetas a 2 para 1000px o menos
+              slidesToScroll: 3, // Cambia el número de tarjetas para desplazarse a 2 para 1000px o menos
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 800, // Agrega un breakpoint personalizado para 1000px
+            settings: {
+              slidesToShow: 2, // Cambia el número de tarjetas a 2 para 1000px o menos
+              slidesToScroll: 2, // Cambia el número de tarjetas para desplazarse a 2 para 1000px o menos
+              dots: false,
+            },
+          },
+          {
+            breakpoint: 500, // Agrega un breakpoint personalizado para 1000px
+            settings: {
+              slidesToShow: 1, // Cambia el número de tarjetas a 2 para 1000px o menos
+              slidesToScroll: 1, // Cambia el número de tarjetas para desplazarse a 2 para 1000px o menos
+              dots: false,
+            },
+          },
+        ],
+      };
 
  
 

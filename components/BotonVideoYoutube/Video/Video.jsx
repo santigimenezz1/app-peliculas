@@ -1,5 +1,6 @@
 import YouTube from "react-youtube";
 import CloseIcon from '@mui/icons-material/Close';
+import BotonClose from "../BotonClose/BotonClose";
 
 const Video = ( {openVideo, closeVideo, showVideo, setShowVideo, videoId, estadoBotonCerrar, setEstadoBotonCerrar} )=>{
   const opts = {
@@ -19,8 +20,8 @@ const Video = ( {openVideo, closeVideo, showVideo, setShowVideo, videoId, estado
           {
           estadoBotonCerrar && (
             
-          <div onClick={()=>cerrarVideo()} style={{position:"absolute", right:"0%", top:"0%", width:"30px", height:"30px", border:"4px solid red", cursor:"pointer", backgroundColor:"white", fontWeight:"bold", borderRadius:"4px" }}>
-            <CloseIcon />
+          <div onClick={()=>cerrarVideo()} style={{position:"absolute", right:"1%", top:"2%" }}>
+            <BotonClose />
           </div>
 
           )

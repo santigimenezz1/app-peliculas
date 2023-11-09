@@ -26,4 +26,53 @@
 }
 
 
+@media screen and (max-width:1000px){
+    .tarjetaSerie{
+        width: 290px;
+        height: 400px;
+       
+    } 
+}
 
+
+@media screen and (max-width:900px){
+    .tarjetaSerie{
+        width: 260px;
+        height: 380px; 
+    } 
+}
+
+@media screen and (max-width:800px){
+    .tarjetaSerie{
+        width: 42vw;
+        height: 420px; 
+    } 
+}
+
+@media screen and (max-width:600px){
+    .tarjetaSerie{
+        width: 40vw;
+        height: 350px; 
+    } 
+}
+
+@media screen and (max-width:600px){
+    .tarjetaSerie{
+        width: 80vw;
+        height: 450px; 
+    } 
+}
+
+@media screen and (max-width:460px){
+    .tarjetaSerie{
+        width: 77vw;
+        height: 450px; 
+    } 
+}
+
+@media screen and (max-width:360px){
+    .tarjetaSerie{
+        width: 74vw;
+        height: 400px; 
+    } 
+}

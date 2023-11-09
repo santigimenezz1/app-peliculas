@@ -45,3 +45,47 @@
 .tarjetaHome:hover h1 {
     opacity: 1; 
 }
+
+
+
+@media screen and (max-width: 1000px){
+    .tarjetaHome{
+        width: 290px;
+        height: 160px; 
+    }   
+}
+
+@media screen and (max-width: 900px){
+    .tarjetaHome{
+        width: 260px;
+        height: 140px; 
+    }   
+}
+
+@media screen and (max-width: 800px){
+    .tarjetaHome{
+        width: 40vw;
+        height: 170px; 
+    }   
+}
+
+@media screen and (max-width: 600px){
+    .tarjetaHome{
+        width: 40vw;
+        height: 140px; 
+    }   
+}
+
+@media screen and (max-width: 500px){
+    .tarjetaHome{
+        width: 75vw;
+        height: 210px; 
+    }   
+}
+
+@media screen and (max-width: 400px){
+    .tarjetaHome{
+        width: 70vw;
+        height: 190px; 
+    }   
+}
