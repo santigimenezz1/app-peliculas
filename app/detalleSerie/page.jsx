@@ -18,12 +18,12 @@ const DetalleSerie = ( {youtubeId, data} ) => {
     setShowVideo(false);
   };
 
-  let urlImagen = ""; 
+  let urlImagen = "";
 
-  if (data.poster_path) {
+  if (data && data.poster_path) {
     urlImagen = `https://image.tmdb.org/t/p/original/${data.poster_path}`;
-  }else{
-    urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699562010/App%20peliculas/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093_r2tucp.png"
+  } else {
+    urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699562010/App%20peliculas/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093_r2tucp.png";
   }
   
 
@@ -36,14 +36,10 @@ const DetalleSerie = ( {youtubeId, data} ) => {
         </div>
       <img className='detalle__imgFondo' src={urlImagen}></img>
       <div className='detalle__info'>
-         <div className='detalle__info__titulo'>
-         <h1>{data.name} ({(data.first_air_date).slice(0,4)})</h1>
-         <h3>{data.genres[0].name}</h3>
-            {
-              data.genres.name &&
-            <h3>{data.genres[0].name}</h3>
-            }
-         </div>
+      <div className='detalle__info__titulo'>
+          {data && data.title && <h1>{data.title} ({(data.release_date).slice(0, 4)})</h1>}
+          {data && data.genres && data.genres.length > 0 && <h3>{data.genres[0].name}</h3>}
+        </div>
          <div className='detalle__info__description'>
             <h1>Vista general</h1>
             <span>{data.overview}</span>
