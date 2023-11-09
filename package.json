@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "custom-build-script": "if [ -n \"$IGNORE_BUILD_ERRORS\" ]; then npm run build; else exit 0; fi"
+    "custom-build-script": "if [ -n \"$IGNORE_BUILD_ERRORS\" ] || [ -n \"$IGNORE_BUILD_WARNINGS\" ]; then npm run build; else exit 0; fi"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -17,7 +17,6 @@
     "@mui/lab": "^5.0.0-alpha.151",
     "@mui/material": "^5.14.16",
     "axios": "^1.6.0",
-    "eslint": "8.52.0",
     "eslint-config-next": "14.0.0",
     "formik": "^2.4.5",
     "next": "^13.5.6",
@@ -28,5 +27,9 @@
     "react-slick": "^0.29.0",
     "react-youtube": "^10.1.0",
     "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2"
   }
 }
