@@ -1,3 +1,4 @@
+
 {
     "version": 2,
     "builds": [
@@ -17,6 +18,9 @@
       "env": {
         "CI": "true"
       }
-    }
+    },
+    
+    "rewrites":[{"source": "/(.*)", "destination": "/" }]
+
   }
   
