@@ -22,6 +22,7 @@ const Colecciones = async ({ params }) => {
   let coleccionCars = await SearchColeccion(87118);
   let disney = await Search("Disney");
 
+
   const collectionProps = {
     name,
     disney,
@@ -37,6 +38,7 @@ const Colecciones = async ({ params }) => {
     coleccionCapitan,
     coleccionGuardianes,
   };
+
   return <PeticionesColecciones {...collectionProps} />;
 };
 

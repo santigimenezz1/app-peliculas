@@ -4,7 +4,12 @@ const { default: CarouselTarjetasSerie } = require("../CarouselTarjetasSerie/Car
 const { default: TarjetaSerie } = require("../TarjetaSerie/TarjetaSerie")
 
 const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, coleccionToyStorie, national, starWars, coleccionVengadores, coleccionHulk, coleccionIronMan, coleccionSpiderman, coleccionCapitan, coleccionGuardianes }) => {
-    return (
+   let te = disney.results
+
+
+
+  console.log({te})
+  return (
         <div class="colecciones">
       <div className={name === "marvel" ? "colecciones__background" : `colecciones__background${`${name}`}`}></div>
             <div className="colecciones__tarjetas">
@@ -30,7 +35,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
                 }
               <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
   {name === "starWars" &&
-    disney.results.map((pelicula) => {
+    starWars.results.map((pelicula) => {
       if (pelicula.media_type === "movie") {
         return (
           <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>
@@ -50,7 +55,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
 
                <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
   {name === "national" &&
-    disney.results.map((pelicula) => {
+    national.results.filter((pelicula)=>pelicula.poster_path).map((pelicula) => {
       if (pelicula.media_type === "movie") {
         return (
           <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>
@@ -71,7 +76,7 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
 
 <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
   {name === "disney" &&
-    disney.results.map((pelicula) => {
+    disney.results.filter((pelicula)=>pelicula.poster_path).map((pelicula) => {
       if (pelicula.media_type === "movie") {
         return (
           <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>

@@ -9,12 +9,14 @@ async function repartoCompletoSerie({ params }) {
     const idSerie = params.id;
     const reparto = await RepartoSerie(params.id);
     const pelicula = await buscarPelicula("tv", params.id);
+    let testtt = await reparto.crew
 
     if (!reparto || !reparto.cast || !reparto.crew) {
       // Manejar el caso en el que los datos de reparto no estén disponibles
       return <div>Cargando datos...</div>;
     }
 
+    console.log({testtt})
     return (
       <div className="repartoCompleto">
         <HeaderReparto idSerie={idSerie} pelicula={pelicula} />
@@ -22,7 +24,7 @@ async function repartoCompletoSerie({ params }) {
           <div className="contaier__repartoCompleto">
             <h1>Reparto</h1>
             <div className="repartoCompletoTarjetas__cast">
-              {reparto.cast.map((actor) => (
+              {reparto.cast.filter((actor)=>actor.profile_path !== null).map((actor) => (
                 <Link style={{textDecoration:"none"}} key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
                   <TarjetaActor key={actor.cast_id || actor.id} actor={actor} />
                 </Link>
@@ -32,7 +34,7 @@ async function repartoCompletoSerie({ params }) {
           <div className="contaier__repartoCompleto">
             <h1>Equipo</h1>
             <div className="repartoCompletoTarjetas__cast">
-              {reparto.crew.map((actor) => (
+              {reparto.crew.filter((actor)=>actor.profile_path !== null).map((actor) => (
                 <Link style={{textDecoration:"none"}} key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
                   <TarjetaActor key={actor.crew_id || actor.id} actor={actor} />
                 </Link>
