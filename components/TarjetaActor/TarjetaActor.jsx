@@ -10,7 +10,6 @@ const TarjetaActor = ({ actor }) => {
     urlImagen = `https://image.tmdb.org/t/p/original/${actor.profile_path}`;
     name = actor.name;
   }
-  console.log({actor})
 
   return (
     <div className='tarjetaActor'>

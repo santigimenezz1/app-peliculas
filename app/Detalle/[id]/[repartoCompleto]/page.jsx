@@ -9,7 +9,9 @@ async function repartoCompleto({ params }) {
     const idPelicula = params.id;
    const reparto = await RepartoPelicula(params.id);
    const pelicula = await buscarPelicula("movie", params.id);
+ let prueba = await reparto.crew
 
+ console.log({prueba})
   return (
     <>
       <div className="repartoCompleto">
