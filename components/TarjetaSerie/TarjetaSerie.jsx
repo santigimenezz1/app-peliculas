@@ -1,7 +1,14 @@
+ "use client"
 import React from 'react'
 import './tarjetaSerie.css'
 import Link from 'next/link'
 import '@/app/mediaQuery.css'
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
+
 
 const TarjetaSerie = ( {movie} ) => {
   let urlImagen = "";
@@ -11,7 +18,7 @@ if (movie.poster_path) {
   urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699589371/http-error-404-not-found_zxyjkx.png";
 
 }  return (
-    <div className='tarjetaSerie'>
+    <div onClick={()=>scrollToTop()} className='tarjetaSerie'>
     <img className='tarjetaSerie__img' src={urlImagen}></img>
     </div>
   )
