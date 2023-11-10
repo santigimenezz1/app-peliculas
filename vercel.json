@@ -16,10 +16,7 @@
     "build": {
       "env": {
         "CI": "true"
-      },
-      "ignore": [
-        "Prevent writing to file that only differs in casing or query string from already written file."
-      ]
+      } 
     }
   }
   
