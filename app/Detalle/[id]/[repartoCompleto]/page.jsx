@@ -6,26 +6,12 @@ import Link from "next/link";
 import LoadingRepartoCompleto from "./loading";
 
 async function repartoCompleto({ params }) {
-  let reparto, pelicula;
-
-  try {
     const idPelicula = params.id;
-    reparto = await RepartoPelicula(params.id);
-    pelicula = await buscarPelicula("movie", params.id);
+   const reparto = await RepartoPelicula(params.id);
+   const pelicula = await buscarPelicula("movie", params.id);
 
-    if (!reparto || !reparto.cast || !reparto.crew) {
-      throw new Error("Los datos de reparto no están disponibles.");
-    }
-  } catch (error) {
-    // Manejar errores de la solicitud
-    console.error("Error en la solicitud de datos:", error);
 
-    return (
-      <>
-        <div>Error al cargar los datos.</div>
-      </>
-    );  
-  }
+  
 
   return (
     <>
