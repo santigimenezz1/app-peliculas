@@ -6,7 +6,9 @@ const TarjetaHome = ( {movie} ) => {
 
   
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 500);
 };
    const urlImagen = `https://image.tmdb.org/t/p/original/${movie.poster_path}`;
     return (

@@ -5,9 +5,10 @@ import Link from 'next/link'
 import '@/app/mediaQuery.css'
 
 const scrollToTop = () => {
-  window.scrollTo(0, 0);
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 500);
 };
-
 
 
 const TarjetaSerie = ( {movie} ) => {
