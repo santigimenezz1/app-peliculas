@@ -12,7 +12,7 @@ async function TarjetaBiografia ( {trabajo} ){
     if (trabajo.poster_path) {
         urlImagen = `https://image.tmdb.org/t/p/original/${trabajo.poster_path}`;
       }else{
-        urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699562010/App%20peliculas/vector-icono-imagen-predeterminado-pagina-imagen-faltante-diseno-sitio-web-o-aplicacion-movil-no-hay-foto-disponible_87543-11093_r2tucp.png"
+        urlImagen = "https://res.cloudinary.com/dcf9eqqgt/image/upload/v1699589079/Error_404_C-170471185-mmed_xh4q2e.jpg"
       }
     return (
         <Link style={{textDecoration:"none", color:"white"}} href={`/detalle/${peticionPelicula.id}`}>

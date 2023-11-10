@@ -23,7 +23,7 @@ async function repartoCompletoSerie({ params }) {
             <h1>Reparto</h1>
             <div className="repartoCompletoTarjetas__cast">
               {reparto.cast.map((actor) => (
-                <Link key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
+                <Link style={{textDecoration:"none"}} key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
                   <TarjetaActor key={actor.cast_id || actor.id} actor={actor} />
                 </Link>
               ))}
@@ -33,7 +33,7 @@ async function repartoCompletoSerie({ params }) {
             <h1>Equipo</h1>
             <div className="repartoCompletoTarjetas__cast">
               {reparto.crew.map((actor) => (
-                <Link key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
+                <Link style={{textDecoration:"none"}} key={actor.id} href={`/detalle/${params.id}/${params.id}/biografia/${actor.id}`}>
                   <TarjetaActor key={actor.crew_id || actor.id} actor={actor} />
                 </Link>
               ))}

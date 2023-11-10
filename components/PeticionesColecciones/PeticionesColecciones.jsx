@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const { default: CarouselTarjetasSerie } = require("../CarouselTarjetasSerie/CarouselTarjetasSerie")
 const { default: TarjetaSerie } = require("../TarjetaSerie/TarjetaSerie")
 
@@ -17,7 +19,6 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
                         <CarouselTarjetasSerie data={coleccionVengadores} />
                     </>
                 }
-
                 {
                     name === "pixar" &&
                     <>
@@ -27,30 +28,66 @@ const PeticionesColecciones = ({ name, disney, coleccionCars, coleccionMonster, 
 
                     </>
                 }
-                <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
-                    {
-                        name === "starWars" &&
-                        starWars.results.map((pelicula) => (
-                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
-                        ))
-                    }
-                </div>
-                <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
-                    {
-                        name === "national" &&
-                        national.results.map((pelicula) => (
-                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
-                        ))
-                    }
-                </div>
-                <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
-                    {
-                        name === "disney" &&
-                        disney.results.map((pelicula) => (
-                            <TarjetaSerie key={pelicula.id} movie={pelicula} />
-                        ))
-                    }
-                </div>
+              <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
+  {name === "starWars" &&
+    disney.results.map((pelicula) => {
+      if (pelicula.media_type === "movie") {
+        return (
+          <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      } else {
+        return (
+          <Link key={pelicula.id} href={`/detalleSerie/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      }
+    })}
+</div>
+
+
+               <div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
+  {name === "national" &&
+    disney.results.map((pelicula) => {
+      if (pelicula.media_type === "movie") {
+        return (
+          <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      } else {
+        return (
+          <Link key={pelicula.id} href={`/detalleSerie/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      }
+    })}
+</div>
+
+
+
+<div style={{ display: "flex", justifyContent: "center", gap: "10px", flexWrap: "wrap" }}>
+  {name === "disney" &&
+    disney.results.map((pelicula) => {
+      if (pelicula.media_type === "movie") {
+        return (
+          <Link key={pelicula.id} href={`/detalle/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      } else {
+        return (
+          <Link key={pelicula.id} href={`/detalleSerie/${pelicula.id}`}>
+            <TarjetaSerie name={name} movie={pelicula} />
+          </Link>
+        );
+      }
+    })}
+</div>
+
             </div>
         </div>
     )

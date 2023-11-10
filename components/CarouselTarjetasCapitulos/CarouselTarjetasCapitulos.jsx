@@ -7,13 +7,13 @@ import { useState } from "react";
 
 export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
     const CustomPrevArrow = (props) => (
-        <button className="slick-arrow slick-prev" onClick={props.onClick}>
+        <button className="slick-arrow slick-prev" onClick={props.onClick} style={{ top: "100px", position: "absolute" }}>
           Anterior
         </button>
       );
     
       const CustomNextArrow = (props) => (
-        <button className="slick-arrow slick-next" onClick={props.onClick}>
+        <button className="slick-arrow slick-next" onClick={props.onClick} style={{  top: "100px", right:"-10px", position: "absolute" }}>
           Siguiente
         </button>
       );
@@ -37,10 +37,28 @@ export default function CarouselTarjetasCapitulos( {capitulosTemporada} ) {
         },
       },
       {
+        breakpoint: 700,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false,
+        },
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          initialSlide: 2,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
           initialSlide: 2,
           dots: false,
         },

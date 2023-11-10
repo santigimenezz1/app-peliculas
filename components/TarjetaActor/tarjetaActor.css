@@ -10,6 +10,7 @@
 }
 .tarjetaActor img{
   width: 100%;
+  height: 190px;
   border-radius: 7px;
   padding: 2px;
   cursor: pointer;

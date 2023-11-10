@@ -10,9 +10,6 @@ async function repartoCompleto({ params }) {
    const reparto = await RepartoPelicula(params.id);
    const pelicula = await buscarPelicula("movie", params.id);
 
-
-  
-
   return (
     <>
       <div className="repartoCompleto">
