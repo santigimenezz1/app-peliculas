@@ -1,4 +1,3 @@
-
 {
     "version": 2,
     "builds": [
@@ -19,8 +18,9 @@
         "CI": "true"
       }
     },
-    
-    "rewrites":[{"source": "/(.*)", "destination": "/" }]
-
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/" }
+    ]
   }
+  
   
