@@ -11,12 +11,12 @@
       }
     ],
     "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
+      { "source": "/(.*)", "destination": "/index.html" }
     ],
     "build": {
       "env": {
         "CI": "true"
-      } 
+      }
     }
   }
   
